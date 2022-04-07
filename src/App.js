@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import PreNavbar from './components/PreNavbar';
+import Inicio from './components/Singin';
+import Carrusel from './components/Carrusel';
+
 
 function App() {
   return (
+
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    <PreNavbar/>
+    <Navbar/>
+    <Carrusel/>
+    
+    
+
+    
+
+    <h1 class=" w-full text-lime-600  underline cursor-pointer">
+    Hello world!
+  </h1>  
+   
     </div>
   );
 }
