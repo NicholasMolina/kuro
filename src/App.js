@@ -8,6 +8,7 @@ import { SliderData }  from './components/SliderData';
 import { Carousel } from 'react-responsive-carousel';
 
 
+
 function App() {
   return (
 

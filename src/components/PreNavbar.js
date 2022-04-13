@@ -60,12 +60,12 @@ import insta from "./assets/instagram.png"
 // export default PreNavbar
 
 
-const PreNavbar = () => {
+const PreNavbar1 = () => {
   return (
-    <nav class="flex items-center justify-between flex-wrap bg-[#2e0057] p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-[#2e0057] p-6 py-2">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
-    
-    <a href ="https://www.instagram.com/amazing_goalkeeper/" class="font-semibold text-xl tracking-tight">amazing_goalkeeper</a>
+  <img src = {insta} className='w-8 h-8 '/>
+    <a href ="https://www.instagram.com/amazing_goalkeeper/" class="font-semibold text-xl tracking-tight pl-1">amazing_goalkeeper</a>
   </div>
   <div class="block lg:hidden">
     <button id='boton' class="flex items-center px-3 py-2 border rounded  border-teal-400 hover:text-white hover:border-white">
@@ -74,25 +74,27 @@ const PreNavbar = () => {
   </div>
   <div id='menu' class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-        Docs
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-        Examples
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">
-        Blog
-      </a>
+    <img src = {Alogo2} className=' w-[180px]  mt-4 lg:inline-block lg:mt-0 '/>
+        <a className='text-white text-2xl align-middle '>Ecommerce </a>
     </div>
     <div>
-      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4">
+        Seguimiento de pedido
+      </a>
+      <a href="ids" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4 border rounded hover:border-transparent">
+        Iniciar Sesion
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black">
+        Registrarse
+      </a>
+      {/* <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}
     </div>
   </div>
 </nav>
   )
 }
 
-export default PreNavbar
+export default PreNavbar1
 
 
 
