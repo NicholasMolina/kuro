@@ -3,7 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PreNavbar from './components/PreNavbar';
 import Inicio from './components/Singin';
-import Carrusel from './components/Carrusel';
+import ImageSlider from './components/ImageSlider';
+import { SliderData }  from './components/SliderData';
+import { Carousel } from 'react-responsive-carousel';
 
 
 function App() {
@@ -14,8 +16,10 @@ function App() {
 
 
     <PreNavbar/>
-    <Navbar/>
-    <Carrusel/>
+    <Navbar/> 
+    <Carousel/>
+
+    <ImageSlider slides={SliderData}/>
     
     
 

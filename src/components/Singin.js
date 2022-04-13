@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Singin.css"
+import "./styles/Singin.css";
 import PreNavbar from './PreNavbar';
 import Navbar from './Navbar';
 

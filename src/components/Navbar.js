@@ -12,7 +12,7 @@ const Navbar = (props) => {
     const active = props.active;
 
   return (
-    <div className='bg-[#f6d3ff]  '>
+    <div className='bg-[#f6d3ff]  flex'>
        
         <nav className=' flex items-center  py-7' >
             <div className=' absolute w-[130px] invert'>
