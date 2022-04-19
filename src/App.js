@@ -6,6 +6,7 @@ import Inicio from './components/Singin';
 import ImageSlider from './components/ImageSlider';
 import { SliderData }  from './components/SliderData';
 import { Carousel } from 'react-responsive-carousel';
+import Footer from './components/Footer';
 
 
 
@@ -19,8 +20,8 @@ function App() {
     <PreNavbar/>
     <Navbar/> 
     <Carousel/>
-
     <ImageSlider slides={SliderData}/>
+    <Footer/>
     
     
 
