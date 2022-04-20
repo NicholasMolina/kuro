@@ -27,9 +27,7 @@ function App() {
 
     
 
-    <h1 class=" w-full text-lime-600  underline cursor-pointer">
-    Hello world!
-  </h1>  
+    
    
     </div>
   );

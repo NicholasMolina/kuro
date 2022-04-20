@@ -19,7 +19,7 @@ const Footer = () => {
                     <h1>Mas informacion de la compañia</h1>
                     <p>Uno de estos es One Piece, la creación de Eiichirō Oda elegida como el manga más popular por el 
                         publico japonés, según la encuesta de TV Asahi. En la lista le siguieron Demon Slayer,
-                        Slam Dunk, Detective Conan y, finalmente, Dragon Ball.</p>              
+                        Slam Dunk, Detective Conan y, finalmente, y ultimo Dragon Ball.</p>              
                 </div>
 
                 <div className='colum2'>
@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                     <div className='row'> 
                         <img src={instagram}></img>
-                        <a href ="" > Siguenos en insta</a> 
+                        <a href ="https://www.instagram.com/amazing_goalkeeper/" > Siguenos en insta</a>    
                     </div>
                 </div>
 

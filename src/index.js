@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
 import Singin from './components/Singin';
+import Login from './components/Login'
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -14,7 +15,8 @@ ReactDOM.render(
 <Router>
     <Routes>
    <Route path='/' element={<App/>}/>
-     <Route path="/ids" element={<Singin/>}/> 
+     <Route path="/SingIn" element={<Singin/>}/>
+     <Route path="/Login" element={<Login/>}/>  
 
    </Routes>
  </Router>, 
