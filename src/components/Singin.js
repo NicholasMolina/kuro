@@ -1,15 +1,11 @@
-import React from 'react';
-import "./styles/Singin.css";
+import React from 'react'
 import PreNavbar from './PreNavbar';
 import Navbar from './Navbar';
 
 
-
-const Singin = () => {
+const Signin = () => {
   return (
-
     <div className=' bg-gray-300'>
-      
     <PreNavbar/>
     <Navbar/>  
     
@@ -19,70 +15,60 @@ const Singin = () => {
             <div className='mb-5'>
               <label 
                 htmlFor='password' 
-                className='block text-gray-700 text-sm font-bold mb-2 text-center'  
+                className='block text-[#2e0057] text-base font-bold mb-2 text-center'  
               >
                 Iniciar Sesion
               </label>
               <input 
                 type="text"
-                id='username' 
+                id='correo' 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'                
                 placeholder='Correo electronico'
               />
             </div>
+
             <div className='mb-6'>
               <label 
                 htmlFor='password' 
                 className='block text-gray-700 text-sm dond-bold mb-2'></label>
             
-            <input 
-                type="password" 
-                className='shadow pt-6appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'                
-                placeholder='Contraseña'
-              />
-        </div>                 
-            <div className='flex items-center justify-between '>
-              <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline '>
-                SING IN
+              <input 
+                  type="password" 
+                  className='shadow pt-6appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'                
+                  placeholder='Contraseña'
+                />
+            </div>
+
+            <div className='flex items-center pb-3'>
+              <input id ="" 
+                    name='' 
+                    type="checkbox" className=''></input>
+              <label 
+                    className='ml-2 block text-sm text-gray-700 focus:outline-none focus:shadow-outline '>
+                    Recordarme  
+              </label> 
+            </div>
+
+            <div className='flex items-center pb-1 '>
+              <button className=' w-full bg-[#f6d3ff] hover:bg-[#2e0057] text-gray-800 hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline '>
+                INICIAR SESION
               </button>
-              <a
-                className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-700'
+
+            </div>
+
+            <a
+                className='inline-block align-baseline font-bold text-xs text-[#2e0057] hover:text-blue-700'
                 href='/'
               >
                 Olvido su contraseña?
               </a>
-            </div>  
+
           </form>
           
         </div>
       </div>    
-
-        {/* <div className='containerPrincipal'>
-          <div className=' containerSecundario'>
-            <div className='form-group'>
-              <label>Usuario: </label>
-              <br/>
-              <input
-                type='text'
-                className='form-control bg-[#f6d3ff]'
-              />
-              <br/>
-              <label>Contraseña: </label>
-              <br/>
-              <input
-                type='password'
-                className='form-control bg-[#f6d3ff]'
-              />
-              <br/>
-              <button className='btn btn-primary'>Iniciar Sesion</button>
-            </div>
-          </div>
-      </div>*/}
-
-
-    </div> 
+    </div>
   )
 }
 
-export default Singin
-
+export default Signin

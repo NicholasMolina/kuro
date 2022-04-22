@@ -2,7 +2,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import PreNavbar from './components/PreNavbar';
-import Inicio from './components/Singin';
+import Inicio from './components/Singup';
 import ImageSlider from './components/ImageSlider';
 import { SliderData }  from './components/SliderData';
 import { Carousel } from 'react-responsive-carousel';

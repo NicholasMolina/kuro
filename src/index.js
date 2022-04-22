@@ -5,18 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
 import Singin from './components/Singin';
-import Login from './components/Login'
+import Singup from './components/Singup'
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
+  // // // <React.StrictMode>
+  // // //   <App />
+  // // // </React.StrictMode>,
 
 <Router>
     <Routes>
    <Route path='/' element={<App/>}/>
-     <Route path="/SingIn" element={<Singin/>}/>
-     <Route path="/Login" element={<Login/>}/>  
+     <Route path="/SingUp" element={<Singup/>}/>
+     <Route path="/SingIn" element={<Singin/>}/>  
 
    </Routes>
  </Router>, 
