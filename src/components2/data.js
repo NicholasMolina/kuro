@@ -14,7 +14,7 @@ const data ={
         },
         {
             id:'2',
-            name:'guante',
+            name:'zapato',
             price:10000,
             tipo: 'guantes',
             talla: 's',
@@ -22,8 +22,8 @@ const data ={
         },
         {
             id:'3',
-            name:'guante',
-            price:10000,
+            name:'gorra',
+            price:1900,
             tipo: 'guantes',
             talla: 's',
             image:Op3,   

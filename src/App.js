@@ -7,10 +7,8 @@ import { Carousel } from 'react-responsive-carousel';
 import Footer from './components/Footer';
 import Products from './components/Products';
 import { CartProvider } from './Context/CartContext';
-import Home from './components/Home';
 import Basket from './components2/Basket';
 import Main from './components2/Main';
-import Header from './components2/Header';
 import './components2/carrito.css';
 import data from './components2/data';
 import { useState } from 'react';
@@ -46,12 +44,11 @@ function App() {
     }
   }
 
-
   return (
 
     <div className='bg-[#2e0057]'>
       <PreNavbar/>
-      <Navbar/> 
+      <Navbar countCartItems={cartItems.length}></Navbar> 
       <Carousel/>
       <ImageSlider slides={SliderData}/>
       <div className=''>

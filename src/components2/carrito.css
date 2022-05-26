@@ -17,6 +17,12 @@ h2{
 h3{
     font-size: 1rem;
 }
+
+hr{
+   height: 2px; 
+   background-color: #2e0057;
+}
+
 a{
     text-decoration:none;
 }

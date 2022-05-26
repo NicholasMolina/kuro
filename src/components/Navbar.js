@@ -1,7 +1,10 @@
 import React from 'react'
 import Alogo from './assets/alogo.png'
 
-const Navbar = () => {
+export default function Navbar(props){
+const{countCartItems} = props;
+
+// const Navbar = () => {
   return (
     <nav className="flex items-center bg-[#f6d3ff]">
   <div className=" flex items-center flex-shrink-0 text-black mr-6">
@@ -18,12 +21,21 @@ const Navbar = () => {
       <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
         Accesorios
       </a>
+      <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0'>
+        Cart { ' '}
+        {countCartItems ? (
+          <button className='badge'>{countCartItems}</button>
+        ) : (
+          ''
+        )}
+      </a>{' '}
+
     </div>  
 </nav>
-  )
+  );
 }
 
-export default Navbar
+
 
 
 // import { Link } from 'react-router-dom'
