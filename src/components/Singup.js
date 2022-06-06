@@ -40,7 +40,7 @@ const Singup = () => {
                   placeholder='Apellido Paterno y Materno*'
                 />         
             </div>
-            <div className='mb-6'>
+            {/* <div className='mb-6'>
               <input 
                   type="tel"
                   id='NumeroContacto' 
@@ -55,7 +55,7 @@ const Singup = () => {
                   className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'                
                   placeholder='Rut*'
                 />         
-            </div>
+            </div> */}
 
             <div className='mb-6'>
               <input 
