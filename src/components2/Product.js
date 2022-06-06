@@ -1,12 +1,17 @@
 import React from 'react'
-import './carrito.css'
+import PreNavbar from '../components/PreNavbar';
+import './styles/carrito.css';
 
 
 export default function Product(props) {
-  const {product, onAdd} = props; 
+  <PreNavbar/>
+  const {product, onAdd} = props;
+   
   return (
-    <div>
-        <img className='small' src={product.image} alt={product.name}></img>
+    
+    <div className=''>
+        
+        <img className='small ' src={product.image} alt={product.name}></img>
         <h3>{product.name}</h3>
         <div>${product.price}</div>
         <h3>{product.tipo}</h3>

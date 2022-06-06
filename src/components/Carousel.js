@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
+// var ReactDOM = require('react-dom');
 var Carousel = require('react-responsive-carousel').Carousel;
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import op1 from "./assets/op1.png"
@@ -29,4 +29,3 @@ var DemoCarousel = React.createClass({
         );
     }
 });
-ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));

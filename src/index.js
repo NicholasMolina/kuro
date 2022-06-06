@@ -5,7 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
 import Singin from './components/Singin';
-import Singup from './components/Singup'
+import Singup from './components/Singup';
+import ProductZapatos from './components2/ProductZapatos';
+import ProductAccesorio from './components2/ProductAccesorios';
+import ProductGuantes from './components2/ProductGuantes';
+
 
 ReactDOM.render(
   // // // <React.StrictMode>
@@ -16,8 +20,11 @@ ReactDOM.render(
     <Routes>
    <Route path='/' element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
-     <Route path="/SingIn" element={<Singin/>}/>  
-
+     <Route path="/SingIn" element={<Singin/>}/>
+     <Route path="/Guantes" element={<ProductGuantes/>}/>
+     <Route path="/Zapatos" element={<ProductZapatos/>}/> 
+     <Route path="/Accesorios" element={<ProductAccesorio/>}/>    
+     
    </Routes>
  </Router>, 
 

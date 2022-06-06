@@ -5,17 +5,16 @@ import ImageSlider from './components/ImageSlider';
 import { SliderData }  from './components/SliderData';
 import { Carousel } from 'react-responsive-carousel';
 import Footer from './components/Footer';
-import Products from './components/Products';
-import { CartProvider } from './Context/CartContext';
 import Basket from './components2/Basket';
 import Main from './components2/Main';
-import './components2/carrito.css';
+import './components2/styles/carrito.css';
 import data from './components2/data';
 import { useState } from 'react';
 
 
 
 function App() {
+ 
   const {products} = data;
   const [cartItems,setCartItems] = useState([]);
   const onAdd = (product) => {
@@ -43,27 +42,21 @@ function App() {
       );
     }
   }
+  
 
   return (
 
     <div className='bg-[#2e0057]'>
       <PreNavbar/>
-      <Navbar countCartItems={cartItems.length}></Navbar> 
+      <Navbar ></Navbar> 
       <Carousel/>
       <ImageSlider slides={SliderData}/>
       <div className=''>
-        <div className='row'>
-          <Main onAdd={onAdd} products = {products}></Main>
-          <Basket 
-          onAdd={onAdd} 
-          onRemove={onRemove} 
-          cartItems={cartItems}
-          ></Basket>
-        </div>
-      <Footer/>
+        
+      
       
       </div>
-
+<Footer/>
          
  
       

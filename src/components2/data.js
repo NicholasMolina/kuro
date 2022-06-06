@@ -28,6 +28,31 @@ const data ={
             talla: 's',
             image:Op3,   
         }, 
+        {
+            id:'4',
+            name:'nami',
+            price:1900,
+            tipo: 'guantes',
+            talla: 's',
+            image:Op3,   
+        }, 
+        {
+            id:'5',
+            name:'zoro',
+            price:1900,
+            tipo: 'guantes',
+            talla: 's',
+            image:Op3,   
+        },
+        {
+            id:'6',
+            name:'luffy',
+            price:1900,
+            tipo: 'guantes',
+            talla: 's',
+            image:Op3,   
+        },
+       
     ],
 };
 

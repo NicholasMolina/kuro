@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 export default function Basket(props){
@@ -6,9 +6,12 @@ export default function Basket(props){
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0);
     const shippingPrice = itemsPrice > 2000 ? 0 :50;
     const totalPrice = itemsPrice + shippingPrice;
+    
 
-    return( 
+    return(   
         <aside className='block2 col-1'>
+            
+          
             <h2> Cart Items  </h2>
             <div>
                 {cartItems.length === 0 && <div>Cart Is Empty</div>}
@@ -30,7 +33,9 @@ export default function Basket(props){
                     </div>
 
                 </div>
+                
             ))}
+            
 
             {cartItems.length !== 0 &&(
                 <>
@@ -60,8 +65,10 @@ export default function Basket(props){
                 </>
             )}
 
-
         </aside>
+
+       
+        
     );
 }
  
