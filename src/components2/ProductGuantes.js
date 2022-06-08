@@ -19,6 +19,7 @@ export default function ProductGuantes(props){
 
 const {products} = data;
   const [cartItems,setCartItems] = useState([]);
+
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if(exist){
@@ -55,56 +56,59 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
     return(
       <div className='absolute right-1 top-36 h-screen w-1/4 bg-transparent'>
          <Basket 
-          onAdd={onAdd} 
-          onRemove={onRemove} 
+           onAdd={onAdd} 
+           onRemove={onRemove} 
           cartItems={cartItems}
           ></Basket>  
       </div>
     )
-    } 
-return (
+    }
+ 
 
-  <div className='bg-[#2e0057]'>
-        <PreNavbar/>
-        
-    <nav className="flex items-center bg-[#f6d3ff]">
-      <div className=" flex items-center flex-shrink-0 text-black mr-6">
-      <img src= {Alogo} className='  w-[120px] p-1'/> 
-        
-      </div>
+  return (
 
-        <div className="text-xl pr-2 ">
-            <a href="/Guantes" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-              Guantes de portero
-            </a>
-            <a href="/Zapatos" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-              Zapatos 
-            </a>
-            <a href="/Accesorio" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
-              Accesorios
-            </a>
+    <div className='bg-[#2e0057]'>
+          <PreNavbar/>
+          
+      <nav className="flex items-center bg-[#f6d3ff]">
+        <div className=" flex items-center flex-shrink-0 text-black mr-6">
+        <img src= {Alogo} className='  w-[120px] p-1'/> 
+          
+        </div>
+
+          <div className="text-xl pr-2 ">
+              <a href="/Guantes" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                Guantes de portero
+              </a>
+              <a href="/Zapatos" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                Zapatos 
+              </a>
+              <a href="/Accesorio" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
+                Accesorios
+              </a>
+              
+              <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0 '>
+                  <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10'> 
+                  {(isSideMenuOpen) ? 
+                    <Icon path={mdiClose} size={'50px'} color="red"></Icon> : 
+                    <Icon path={mdiCartOutline} size={'50px'} color="black" > </Icon> }
+                  </button>
+      
+                {(isSideMenuOpen ) ? SideMenu() : ""}
             
-            <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0 '>
-                <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10'> 
-                {(isSideMenuOpen) ? 
-                  <Icon path={mdiClose} size={'50px'} color="red"></Icon> : 
-                  <Icon path={mdiCartOutline} size={'50px'} color="black" > </Icon> }
-                </button>
-    
-              {(isSideMenuOpen ) ? SideMenu() : ""}
-           
-            </a>     
-    
+              </a>     
+      
+            </div>  
+      </nav>
+
+
+        <div className=''>
+          <div className={style}>
+            <Main onAdd={onAdd} products = {products}   ></Main> 
           </div>  
-    </nav>
+        </div>
+    </div> 
+  )
 
-
-      <div className=''>
-        <div className={style}>
-          <Main onAdd={onAdd} products = {products}   ></Main> 
-        </div>  
-      </div>
-  </div> 
-)
 }
 

@@ -9,7 +9,7 @@ const data ={
             name:'guante',
             price:1000,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image: Op1,
         },
         {
@@ -17,7 +17,7 @@ const data ={
             name:'zapato',
             price:10000,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image:Op2,   
         },
         {
@@ -25,7 +25,7 @@ const data ={
             name:'gorra',
             price:1900,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image:Op3,   
         }, 
         {
@@ -33,7 +33,7 @@ const data ={
             name:'nami',
             price:1900,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image:Op3,   
         }, 
         {
@@ -41,7 +41,7 @@ const data ={
             name:'zoro',
             price:1900,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image:Op3,   
         },
         {
@@ -49,7 +49,7 @@ const data ={
             name:'luffy',
             price:1900,
             tipo: 'guantes',
-            talla: 's',
+            talla: 'Talla: S',
             image:Op3,   
         },
        
