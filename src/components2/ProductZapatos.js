@@ -30,14 +30,17 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
 
   const[products, setProducts] = useState([]);
 
-  const urll = "http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/category/2";
+  //const urll = "http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/category/2";
+  const urll ="https://rickandmortyapi.com/api/character";
 
   const fetchApi = (urll) => {
     axios
       .get(urll)
       .then((data)=>{
-        setProducts(data.data.products);
-        console.log(data.data.products);
+        //setProducts(data.data.products);
+        //console.log(data.data.products);
+        setProducts(data.data.results);
+        console.log(data.data.results);
       })
       .catch((error) => {
         console.log(error);
@@ -82,7 +85,7 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
                 <div key={product.id} product={product}>    
                   <img className='small ' src={product.image} alt={product.name}></img>
                   <h1>{product.name}</h1>
-                  <div>${product.price}
+                  <div>${product.status}
                       <div>
                       <button onClick={()=>ShowReview()}>Add To Cart</button>
                       </div>
