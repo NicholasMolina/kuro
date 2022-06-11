@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Singin from './components/Singin';
 import Singup from './components/Singup';
 import ProductZapatos from './components2/ProductZapatos';
 import ProductAccesorios from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
+import ZoomProductApi from './components2/ZoomProductApi';
 
 
 ReactDOM.render(
@@ -23,7 +24,8 @@ ReactDOM.render(
      <Route path="/SingIn" element={<Singin/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
-     <Route path="/Accesorios" element={<ProductAccesorios/>}/>    
+     <Route path="/Accesorios" element={<ProductAccesorios/>}/>
+     <Route path="/Zoom" element={<ZoomProductApi/>}/>        
      
    </Routes>
  </Router>, 
