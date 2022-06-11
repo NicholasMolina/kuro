@@ -2,23 +2,25 @@ import React from 'react';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 //import data from './data';
-import Basket from './Basket';
+//import Basket from './Basket';
 import PreNavbar from '../components/PreNavbar';
-import Product from './Product';
-import ZoomProduct from './ZoomProduct';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+//import Product from './Product';
+//import ZoomProduct from './ZoomProduct';
 // --------------
-import Alogo from './assets/alogo.png'
-import Icon from '@mdi/react';
-import { mdiCartOutline, mdiClose } from '@mdi/js';
+//import Alogo from './assets/alogo.png'
+//import Icon from '@mdi/react';
+//import { mdiCartOutline, mdiClose } from '@mdi/js';
 
 export default function ProductGuantes(props){ 
-  const [style, setStyle] = useState("");
+  //const [style, setStyle] = useState("");
   
-  const changeStyle = () => {
-    {(style == "cont3") ? setStyle("cont2") : setStyle("cont3")}  
-  };
-  const[isReviewOpen, setisReviewOpen ] = useState(false);
-const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewOpen(true)}
+  //const changeStyle = () => {
+   // {(style == "cont3") ? setStyle("cont2") : setStyle("cont3")}  
+  //};
+  //const[isReviewOpen, setisReviewOpen ] = useState(false);
+//const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewOpen(true)}
 
 
 
@@ -40,7 +42,7 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
         //setProducts(data.data.products);
         //console.log(data.data.products);
         setProducts(data.data.results);
-        console.log(data.data.results);
+        console.log(data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -54,29 +56,7 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
     return (
       <div className='bg-[#2e0057]'>
             <PreNavbar/>
-
-        <nav className="flex items-center bg-[#f6d3ff]">
-          <div className=" flex items-center flex-shrink-0 text-black mr-6">
-          <img src= {Alogo} className='  w-[120px] p-1'/> 
-            
-          </div>
-
-            <div className="text-xl pr-2 ">
-                <a href="/Guantes" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-                  Guantes de portero
-                </a>
-                <a href="/Zapatos" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-                  Zapatos 
-                </a>
-                <a href="/Accesorio" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
-                  Accesorios
-                </a>
-                
-                <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0 '>      
-                </a>     
-        
-              </div>  
-        </nav>
+            <Navbar/>
 
           <main className='block2 col-2'>
             <h2>PRODUCTOS: ZAPATOS</h2>
@@ -87,7 +67,7 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
                   <h1>{product.name}</h1>
                   <div>${product.status}
                       <div>
-                      <button onClick={()=>ShowReview()}>Add To Cart</button>
+                      <button /*onClick={()=>ShowReview()}*/>Add To Cart</button>
                       </div>
                   </div>
                 </div>
@@ -95,7 +75,10 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
               
             </div>
           </main>
+          <Footer/>
       </div> 
+
     )
+    
 
 }
