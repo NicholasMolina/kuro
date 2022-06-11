@@ -5,7 +5,7 @@ import PreNavbar from '../components/PreNavbar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ZoomProductApi from './ZoomProductApi';
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+
 
 // --------------
 
@@ -40,11 +40,10 @@ export default function ProductGuantes(props){
 
   //  ----------------------------
     const [cambio,setCambio] = useState(true);
-   
 
 
     if(!cambio) {
-      return <ZoomProductApi key={product2.id} product={product2}></ZoomProductApi>
+      return <ZoomProductApi ></ZoomProductApi>
     }
 
   // --------------------------------
@@ -86,3 +85,5 @@ export default function ProductGuantes(props){
    
 
 }
+
+
