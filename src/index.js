@@ -7,7 +7,7 @@ import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
 import Singin from './components/Singin';
 import Singup from './components/Singup';
 import ProductZapatos from './components2/ProductZapatos';
-import ProductAccesorio from './components2/ProductAccesorios';
+import ProductAccesorios from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
 
 
@@ -23,7 +23,7 @@ ReactDOM.render(
      <Route path="/SingIn" element={<Singin/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
-     <Route path="/Accesorios" element={<ProductAccesorio/>}/>    
+     <Route path="/Accesorios" element={<ProductAccesorios/>}/>    
      
    </Routes>
  </Router>, 

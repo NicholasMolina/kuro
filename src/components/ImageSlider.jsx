@@ -39,20 +39,6 @@ if(!Array.isArray(slides) || slides.lenght <= 0){
 })}
       </section>
 
-    // <div className='slider-container'>
-    //      <div className='absolute w-full top-1/2 transform -translate-y-1/2 px-3
-    //     bg-red-400 flex justify-between item-center'>
-    //         <button>Anterior</button>
-    //         <button>Siguiente</button>
-    //     </div>
-    //     <div className='slider' >
-    //     {SliderData.map(image => (
-    //         <div className='item'>
-    //             <img src={image} alt='travel image' />
-    //         </div>        
-    //     ))}        
-    //     </div>
-    // </div>
     );
 };
 
