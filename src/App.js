@@ -6,10 +6,6 @@ import { SliderData }  from './components/SliderData';
 import { Carousel } from 'react-responsive-carousel';
 import Footer from './components/Footer';
 import './components2/styles/carrito.css';
-import data from './components2/data';
-import { useState } from 'react';
-import Bot from './components3/Bot';
-import { BrowserRouter as Router,Route,Link,Switch,Routes } from 'react-router-dom';
 import React from 'react';
 
 
