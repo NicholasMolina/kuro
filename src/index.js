@@ -9,6 +9,8 @@ import Singup from './components/Singup';
 import ProductZapatos from './components2/ProductZapatos';
 import ProductAccesorio from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
+import Home from './components/Home';
+import Details from './components2/Details'
 
 
 ReactDOM.render(
@@ -18,12 +20,14 @@ ReactDOM.render(
 
 <Router>
     <Routes>
+   <Route path='/Home' element={<Home/>}/>
    <Route path='/' element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
-     <Route path="/Accesorios" element={<ProductAccesorio/>}/>    
+     <Route path="/Accesorios" element={<ProductAccesorio/>}/>
+     <Route path="/Product/:id" element={<Details/>}>  </Route>    
      
    </Routes>
  </Router>, 
@@ -38,4 +42,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
