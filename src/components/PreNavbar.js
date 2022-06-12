@@ -1,4 +1,5 @@
  import React from 'react'
+import { Link } from 'react-router-dom'
 import Alogo2 from "./assets/alogo2.png"
 import insta from "./assets/instagram.png"
 
@@ -17,7 +18,9 @@ const PreNavbar = () => {
   </div>
   <div id='menu' className="text-center w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div className="text-sm lg:flex-grow">
-    <img src = {Alogo2} className=' w-[180px]  mt-4 lg:inline-block lg:mt-0 '/>
+      <Link to = {'/Home'}>
+        <img src = {Alogo2} className=' w-[180px]  mt-4 lg:inline-block lg:mt-0 '/>
+      </Link>
         <a className='text-white text-2xl align-middle '>Ecommerce </a>
     </div>
     <div>
