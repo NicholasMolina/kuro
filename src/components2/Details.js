@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import {useParams} from 'react-router-dom';
-
+import {Link} from 'react-router-dom'
 import PreNavbar from '../components/PreNavbar';
 import Footer from '../components/Footer';
 import Basket from './Basket';
@@ -67,7 +67,9 @@ return(
 {/* ------------------------------Nabvar----------- */}
       <nav className="flex items-center bg-[#f6d3ff]">
         <div className=" flex items-center flex-shrink-0 text-black mr-6">
-          <img src= {Alogo} className='  w-[120px] p-1'/>
+          <Link to = {'/Home'}>
+            <img src= {Alogo} className='  w-[120px] p-1'/>
+          </Link>  
         </div>
 
           <div className="text-xl pr-2 ">
