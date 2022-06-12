@@ -1,52 +1,31 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
-import axios from 'axios';
+import { useState,useEffect,useParams } from 'react';
+import {Link} from 'react-router-dom'
 import PreNavbar from '../components/PreNavbar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ZoomProductApi from './ZoomProductApi';
 
-
-// --------------
 
 export default function ProductGuantes(props){ 
 
-//---------------------------------NAVBAR---------------------------------------------------------------------------------------
-
- 
-  const[products2, setProducts] = useState([]);
+  const[products, setProducts] = useState([]);
 
   //const urll = "http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/category/2";
   const urll ="https://rickandmortyapi.com/api/character";
 
-  const fetchApi = (urll) => {
-    axios
-      .get(urll)
-      .then((data)=>{
-        //setProducts(data.data.products);
-        //console.log(data.data.products);
-        setProducts(data.data.results);
-        console.log(data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+  const fetchApi = async () => {
+    const data = await fetch(urll);
+    const products = await data.json()
+    //setProducts(products.products)
+    //console.log(products.products)
+    setProducts(products.results)
+    console.log(products.results)
   }
 
   useEffect(() => {
     fetchApi(urll)
   },[])
 
-
-  //  ----------------------------
-    const [cambio,setCambio] = useState(true);
-
-
-    if(!cambio) {
-      return <ZoomProductApi ></ZoomProductApi>
-    }
-
-  // --------------------------------
 
     return (
       <div className='bg-[#2e0057]'>
@@ -56,21 +35,15 @@ export default function ProductGuantes(props){
           <main className='block2 col-2'>
             <h2>PRODUCTOS: ZAPATOS</h2>
             <div className='row prueba'>
-              {products2.map((product2) => (
-                
-                <div key={product2.id} product={product2}>
-                      
-                  <img className='small ' src={product2.image} alt={product2.name}></img>
-                  <h1>{product2.name}</h1>
-                  <div>Estado: {product2.status}
-                      <div>
-                       <button  onClick={() => setCambio(false)}>
-                        
-                       Add To Cart
-                        </button> 
-                      
-                      </div>
-                  </div>
+              {products.map(item => (
+                <div key={item.id} product={item} className="hover:bg-[#2e0057]">  
+                  <Link to = {`/product/${item.id}`}>
+                    <div className=' text-[#2e0057] hover:text-[#f6d3ff]'>
+                    <img className='small ' src={item.image} alt={item.name}></img>
+                    <h1>{item.name},{item.id}</h1>
+                    <h3>${item.status}</h3>
+                    </div>
+                  </Link>
                 </div>
               ))}
               
@@ -80,10 +53,6 @@ export default function ProductGuantes(props){
       </div> 
 
     )
-
     
-   
 
 }
-
-

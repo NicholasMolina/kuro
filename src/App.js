@@ -9,11 +9,14 @@ import './components2/styles/carrito.css';
 import data from './components2/data';
 import { useState } from 'react';
 import Bot from './components3/Bot';
+import { BrowserRouter as Router,Route,Link,Switch,Routes } from 'react-router-dom';
+import React from 'react';
 
 
 
 function App() {
  
+
   
   
 
@@ -24,17 +27,13 @@ function App() {
       <Navbar ></Navbar> 
       <Carousel/>
       <ImageSlider slides={SliderData}/>
-      <div className=''>
-      {/* <Bot></Bot> */}
-      </div>
-     <Footer/>
-         
+        <div className=''>
+        {/* <Bot></Bot> */}
+        </div>
+      <Footer/>
+    </div> 
+    )    
  
       
 
-    </div>
-    
-  );
-}
-
-export default App;
+}export default App
