@@ -9,7 +9,7 @@ import Singup from './components/Singup';
 import ProductZapatos from './components2/ProductZapatos';
 import ProductAccesorios from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
-import ZoomProductApi from './components2/ZoomProductApi';
+
 
 
 ReactDOM.render(
@@ -25,7 +25,7 @@ ReactDOM.render(
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorios/>}/>
-     <Route path="/Zoom" element={<ZoomProductApi/>}/>        
+         
      
    </Routes>
  </Router>, 

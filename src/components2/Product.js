@@ -36,9 +36,10 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
   )
 
   function Review (){
-     
+    // border-solid border-2 border-[#2e0057]  absolute top-0 w-2/4 h-2/4 bg-[#f6d3ff]
     return(
-       <div className=' border-solid border-2 border-[#2e0057]  absolute top-0 w-2/4 h-2/4 bg-[#f6d3ff]'>
+    <div className='flex flex-wrap'>
+       <div className=' w-2/4 h-2/4 bg-[#f6d3ff] border-solid border-2 border-[#2e0057] absolute inset-y-0 '>
           <div className=' mt-1 lg:inline-block absolute'>       
             <button  onClick={() =>{ShowReview()}}  className='bg-white'> 
                       {(isReviewOpen) ? 
@@ -49,6 +50,7 @@ const ShowReview = () => {(isReviewOpen) ? setisReviewOpen(false) : setisReviewO
           <div className=''>
             <ZoomProduct key={product.id} product={product} onAdd={onAdd}></ZoomProduct>
           </div>
+       </div>
        </div>
      )
    }

@@ -7,11 +7,12 @@ export default function Basket(props){
     const shippingPrice = itemsPrice > 2000 ? 0 :50;
     const totalPrice = itemsPrice + shippingPrice;
     
+    
 
-    return(   
-        <aside className='block2 col-1'>
-            
-          
+
+    return(      
+        <aside className='block3 '>
+     
             <h2> Cart Items  </h2>
             <div>
                 {cartItems.length === 0 && <div>Cart Is Empty</div>}
@@ -66,9 +67,7 @@ export default function Basket(props){
             )}
 
         </aside>
-
        
-        
     );
 }
  
