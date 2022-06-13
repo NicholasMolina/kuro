@@ -9,6 +9,7 @@ import Footer from './Footer';
 //import './components2/styles/carrito.css';
 import { useState } from 'react';
 import data from '../components2/data';
+import Bot from  '../components3/Bot';
 
 
 
@@ -50,6 +51,7 @@ function Home() {
       <Carousel/>
       <ImageSlider slides={SliderData}/>
       <div className=''>
+        <Bot></Bot>  
       </div>
 <Footer/>
 

@@ -60,10 +60,15 @@ img.small{
     height: 260.66px;
     width: 387.5px;
 }
-
-img.small2{
+img.rewiew{
+    height: 300px;
     width: 100%;
-    height: 160px;
+}
+
+
+img.smallbot{
+    width: 200px;
+    height: 350px;
 }
 
 img.smallZoom{

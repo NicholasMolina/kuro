@@ -102,7 +102,7 @@ return(
     
     <main className='block2 flex flex-row justify-center'>
      
-        <img className='smallZoom' src={details.image} alt={details.name}></img>
+        <img className='smallzoom' src={details.image} alt={details.name}></img>
           <div className=' m-4'>
             <h1>{details.name}</h1>
             <h1>{details.status}</h1>

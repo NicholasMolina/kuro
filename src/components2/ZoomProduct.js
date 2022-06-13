@@ -8,7 +8,7 @@ export default function ZoomProduct(props) {
   return (
     <div className=''>
         
-        <img className='small2 ' src={product.image} alt={product.name}></img>
+        <img className='rewiew' src={product.image} alt={product.name}></img>
         <div className=' text-black ml-2'>
             <h3>{product.name}</h3>
             <div>${product.price}</div>
