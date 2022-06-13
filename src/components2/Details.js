@@ -15,18 +15,19 @@ export default function  Details (props){
     const{id} = useParams()
     console.log(id)
     const[details, setDetails] = useState([]);
-    const[categories,setCategories] = useState([]);
-    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/${id}`;
-    //const urll =`https://rickandmortyapi.com/api/character/${id}`;
+    //const[categories,setCategories] = useState([]);
+    //const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/${id}`;
+    const urll =`https://rickandmortyapi.com/api/character/${id}`;
     
     const fetchApi = async () => {
         const data = await fetch(urll);
         const details = await data.json()
+        setDetails(details)
+        console.log(details)
+        //setDetails(details.product)
+        //setCategories(details.product.category)
 
-        setDetails(details.product)
-        setCategories(details.product.category)
-
-        console.log(details.product)
+        //console.log(details.product)
         //console.log(details.category.name)
         //console.log(details.product.name)
 
@@ -113,10 +114,10 @@ return(
      
         <img className='w-[35%]' src={details.image} alt={details.name}></img>
           <div className=' m-4'>
-          <h3>{categories.name}</h3>
+          {/*<h3>{categories.name}</h3>*/}
             <h1>{details.name}</h1>
             <h3>${details.price}</h3>
-            <Pruebas pruebas2={details.id}></Pruebas>
+            {/*<Pruebas pruebas2={details.id}></Pruebas>*/}
               <div className='pt-6'>
                 <button className="Zoom"> AGREGAR A CARRO DE COMPRA</button>
               </div>
