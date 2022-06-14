@@ -119,7 +119,7 @@ return(
             <h3>${details.price}</h3>
             {/*<Pruebas pruebas2={details.id}></Pruebas>*/}
               <div className='pt-6'>
-                <button className="Zoom"> AGREGAR A CARRO DE COMPRA</button>
+                <button className="Zoom buton"> AGREGAR A CARRO DE COMPRA</button>
               </div>
           </div>
           

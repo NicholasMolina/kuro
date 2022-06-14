@@ -90,7 +90,7 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
               </a>
 
               <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0 '>
-                  <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10'>
+                  <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10 '>
                   {(isSideMenuOpen) ?
                     <Icon path={mdiClose} size={'50px'} color="red"></Icon> :
                     <Icon path={mdiCartOutline} size={'50px'} color="black" > </Icon> }
