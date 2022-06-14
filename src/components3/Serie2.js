@@ -32,9 +32,9 @@ export default function Serie2 (props)  {
             pagina3()
           }}
           >
-            <h1>Juego al máximo nivel</h1>
+            <h1>Juego al máximo nivel en climas extremos</h1>
               <div className='m-2'>
-                <h2 className='preguntas '>Quiero un látex de máximo agarre y amortiguación. Asumo que la palma es delicada.</h2>
+                <h2 className='preguntas '>En mi campo llueve muchas veces, lo riegan mucho y hace frío. Tejidos aislantes y palma delicada con máximo agarre.</h2>
               </div>
           </button>
         </div>
@@ -44,9 +44,9 @@ export default function Serie2 (props)  {
             pagina3()
           }}
           >
-            <h1>Juego al máximo nivel</h1>
+            <h1>Juego federado a nivel amateur</h1>
               <div className='m-2'>
-                <h2 className='preguntas '>Quiero un látex de máximo agarre y amortiguación. Asumo que la palma es delicada.</h2>
+                <h2 className='preguntas '>Necesito un buen guante pero no puedo cambiarlo cada poco tiempo. Agarre y duración media.</h2>
               </div>
           </button> 
           {/* {PageDisplay()} */}
