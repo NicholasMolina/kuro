@@ -7,7 +7,7 @@ import Alogo from './assets/alogo.png'
   return (
     <nav className="flex items-center bg-[#f6d3ff]">
   <div className=" flex items-center flex-shrink-0 text-black mr-6">
-    <Link to = {'/Home'}>
+    <Link to = '/Home'>
       <img src= {Alogo} className='  w-[120px] p-1'/> 
     </Link>
   </div>

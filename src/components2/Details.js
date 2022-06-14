@@ -100,7 +100,7 @@ return(
               </div>
             ))}
               <div className='pt-6'>
-                <button className="Zoom"> AGREGAR A CARRO DE COMPRA</button>
+                <button className="Zoom buton"> AGREGAR A CARRO DE COMPRA</button>
               </div>
 
               {cc.map(item => (

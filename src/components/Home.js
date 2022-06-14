@@ -10,6 +10,7 @@ import Footer from './Footer';
 import { useState } from 'react';
 import data from '../components2/data';
 import Bot from  '../components3/Bot';
+import Recomendador from "../components3/Recomendador";
 
 
 
@@ -50,9 +51,7 @@ function Home() {
       <Navbar ></Navbar> 
       <Carousel/>
       <ImageSlider slides={SliderData}/>
-      <div className=''>
-        <Bot></Bot>  
-      </div>
+      <Bot></Bot>
 <Footer/>
 
     </div>

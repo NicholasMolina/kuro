@@ -10,7 +10,9 @@ import ProductZapatos from './components2/ProductZapatos';
 import ProductAccesorio from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
 import Home from './components/Home';
-import Details from './components2/Details'
+import Details from './components2/Details';
+import Recomendador from './components3/Recomendador';
+import Serie3 from './components3/Serie3';
 
 
 ReactDOM.render(
@@ -20,15 +22,16 @@ ReactDOM.render(
 
 <Router>
     <Routes>
-   <Route path='/Home' element={<Home/>}/>
-   <Route path='/' element={<App/>}/>
+      <Route path='/Home' element={<Home/>}/>
+      <Route path='/' element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
-     <Route path="/Product/:id" element={<Details/>}>  </Route>    
-     
+     <Route path="/Product/:id" element={<Details/>}>  </Route>      
+     <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
+     <Route path="/Serie3" element={<Serie3/>}/>  
    </Routes>
  </Router>, 
 

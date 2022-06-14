@@ -1,0 +1,37 @@
+.preguntasConteiner{
+    width: 100%;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+button.preguntas{
+    background-color: #2e0057;
+    border: none;
+    border-radius: none;
+    color: #f6d3ff;
+
+}
+
+h1.preguntas{
+    text-align: center;
+   
+}
+
+h2.preguntas{
+    text-align: center;
+    font-size: 1rem;   
+}
+
+img.recomendador{
+    width: 200px;
+    height: 400px;
+}
+
+
+
