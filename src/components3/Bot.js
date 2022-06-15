@@ -20,12 +20,12 @@ function Bot (){
      <div>
      <div className='flex justify-between text-white'>   
              <img src={jugador1} className='smallbot'></img>
-             <div className='w-80'>
-                 <div className=' grid justify-center pt-4'>          
-                   <text className='  font-sans' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
+             <div className='w-1/2 flex flex-col'>
+                 <div className=' flex flex-row justify-center pt-4'>          
+                   <text className=' flex-row ' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
                  </div>
-                 <div>
-                   <text className=' text-center'>Existen miles de guantes de portero en el mercado, pero
+                 <div className='m-2 flex flex-row justify-around'>
+                   <text className=' w-1/2'>Existen miles de guantes de portero en el mercado, pero
                       ¿cuál es el más adecuado para tí? 
                       Con este recomendador te ayudaremos a elegir los más acertados para tí.
                    </text>
@@ -36,10 +36,13 @@ function Bot (){
                   </Link>
                 </div>             
                 
-                 {(isPreguntasOpen) ? PreguntasOpen() : ""}  */}
-
-               <Link to="/Recomendador">RECOMENDADOR DE GUANTES</Link>       
-
+                 {(isPreguntasOpen) ? PreguntasOpen() : ""}  */}<div className='flex flex-row justify-center'>
+                <div className='flex flex-row justify-around bg-[#f6d3ff] text-[#2e0057] w-1/2 zoom'>
+                  
+                    <Link to="/Recomendador" className=''>RECOMENDADOR DE GUANTES</Link>       
+                 
+               </div>
+               </div>
              </div>
             <img src={jugador2} className='smallbot'></img>
        

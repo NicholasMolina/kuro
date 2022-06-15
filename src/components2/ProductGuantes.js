@@ -24,6 +24,7 @@ const {products} = data;
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
+    const valor =+ 1;
     if(exist){
       setCartItems(
         cartItems.map((x) =>
@@ -37,6 +38,7 @@ const {products} = data;
 
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
+    const valor =- 1;
     if(exist.qty === 1){
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     } else{
@@ -48,10 +50,17 @@ const {products} = data;
     }
   }
 
+  const carro = () =>{
+    if( cartItems.length !== 0){
+      return  cartItems.length;
+    }
+  }
+
 
 const[isSideMenuOpen, setisSideMenuOpen ] = useState(false);
 const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)}
 
+ const{item} = props
 
   function SideMenu() {
     return(
@@ -93,8 +102,16 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
                   <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10 '>
                   {(isSideMenuOpen) ?
                     <Icon path={mdiClose} size={'50px'} color="red"></Icon> :
-                    <Icon path={mdiCartOutline} size={'50px'} color="black" > </Icon> }
+                    <div>
+                      <Icon path={mdiCartOutline} size={'50px'} color="black" /> 
+                      <div className='absolute pl-12 -mt-6'>
+                        {carro()}
+                      </div>
+                    </div>}
+                    
                   </button>
+                  
+                  
 
                 {(isSideMenuOpen ) ? SideMenu() : ""}
 

@@ -38,13 +38,12 @@ export default function ProductGuantes(props){
             <h2>PRODUCTOS: ZAPATOS</h2>
             <div className='row prueba'>
               {products.map(item => (
-                <div key={item.id} product={item} className="hover:bg-[#2e0057]">  
+                <div key={item.id} product={item} className=" zoom2">  
                   <Link to = {`/product/${item.id}`}>
-                    
-                    <div className=' text-[#2e0057] hover:text-[#f6d3ff]'>
+                    <div className=' text-[#2e0057] hover:text-[#2e0057]'>
                     <img className='small ' src={item.image} alt={item.name}></img>
                     <h1>{item.name},{item.id}</h1>
-                    <h3>${item.status}</h3>
+                    <h3 className=' text-sm'>${item.status}</h3>
                     </div>
                   </Link>
                 </div>

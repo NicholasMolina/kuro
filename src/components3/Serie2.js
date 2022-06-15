@@ -13,9 +13,8 @@ export default function Serie2 (props)  {
   return (
       <div className='flex flex-col '>
 
-        <div className='m-1'>
-        {/* <Link to = '/Serie3'> */}
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
             pagina3()
           }}              
@@ -26,8 +25,8 @@ export default function Serie2 (props)  {
               </div>
           </button>   
         </div>
-        <div className='m-1'>
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
             pagina3()
           }}
@@ -38,8 +37,8 @@ export default function Serie2 (props)  {
               </div>
           </button>
         </div>
-        <div className='m-1 '>
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
             pagina3()
           }}

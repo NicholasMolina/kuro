@@ -51,10 +51,12 @@ export default function Recomendador (props){
     <div className='progressbar'></div>
     
         <div className='form-container flex justify-between'>
-        <img src={jugador1} className='recomendador'></img>
-            <div className='grid justify-center pt-4 preguntasConteiner'>
+        <img src={jugador1} className='recomendador hidden lg:flex'></img>
+            <div className='flex flex-col justify-center pt-4 preguntasConteiner'>
                 <div className='header'></div>
-                    <h1 className='preguntas'>{Preguntas[page]}</h1>
+                    <div className=' flex-row'>
+                        <h1 className='preguntas'>{Preguntas[page]}</h1>
+                    </div>
                 <div className='body'>
                     {PageDisplay()}
                 </div>
@@ -70,7 +72,7 @@ export default function Recomendador (props){
                         setPage((currPage) => currPage + 1);
                     }}>Next</button> */}
             </div>
-        <img src={jugador2} className='recomendador'></img>    
+        <img src={jugador2} className='recomendador hidden lg:flex'></img>    
         </div>
     <Footer/>
   </div>
