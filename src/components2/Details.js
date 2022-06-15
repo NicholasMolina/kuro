@@ -8,105 +8,81 @@ import Alogo from './assets/alogo.png'
 import Icon from '@mdi/react';
 import { mdiCartOutline, mdiClose } from '@mdi/js';
 import Pruebas from'./pruebas';
+import Navbar from '../components/Navbar';
 
 
-export default function  Details (props){
-//console.log(useParams());
-    const{id} = useParams()
-    console.log(id)
+export default function  Details (){
+   // console.log(useParams())
+    const {id} = useParams()
+    //console.log(id)
     const[details, setDetails] = useState([]);
-    //const[categories,setCategories] = useState([]);
-    //const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/${id}`;
-    const urll =`https://rickandmortyapi.com/api/character/${id}`;
-    
-    const fetchApi = async () => {
-        const data = await fetch(urll);
-        const details = await data.json()
-        setDetails(details)
-        console.log(details)
-        //setDetails(details.product)
-        //setCategories(details.product.category)
+    const[categories,setCategories] = useState([]);
 
-        //console.log(details.product)
-        //console.log(details.category.name)
-        //console.log(details.product.name)
+    const[stock,setStock] = useState([]);
+    const[sizes,setSizes] = useState([]);
 
+    const[cc,setCc] = useState([]);
+    const[feature,setFeature] = useState([]);
+    const[tf,setTypeF] = useState([]);
 
-        //const i = Pruebas(details.product.category_id)
-    } 
+    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/${id}`;
+    const urll2 =`http://localhost/proyectoag/api-rest-laravel-ag/public/api/stock/product/${id}`;
+    const urll3 = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/cc/product/${id}`;
+    //const urll =`https://rickandmortyapi.com/api/character/${id}`;
 
   
     useEffect(() => {
+      const fetchApi = async () => {
+        const data = await fetch(urll);
+        const ss = await data.json()
+        //setDetails(details)
+        //console.log(details)
+        setDetails(ss.product)
+        setCategories(ss.product.category)
+        
+      }
       fetchApi(urll)
+      
+    },[])
+
+    useEffect(() => {
+      const fetchApi = async () => {
+        const data = await fetch(urll2);
+        const ss = await data.json()
+        //setDetails(details)
+        //console.log(details)
+        setStock(ss.stock)
+        setSizes(ss.stock.size)
+        //console.log(ss.stock.size)
+      }
+      fetchApi(urll)
+      
+    },[])
+
+    useEffect(() => {
+      const fetchApi = async () => {
+        const data = await fetch(urll3);
+        const ss = await data.json()
+        setCc(ss.cc);
+        setFeature(ss.cc.feature)
+        setTypeF(ss.cc.typefeature)
+        
+        
+        
+      }
+      fetchApi(urll)
+      
     },[])
    
 
 // ----------------------------Basket-------------------------------
 
-const {onAdd,onRemove,cartItems} = props;
-
-
-const[isSideMenuOpen, setisSideMenuOpen ] = useState(false);
-const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)}
-
-
-  function SideMenu() {
-    return(
-      <div className='absolute right-1 top-36 h-screen w-1/4 bg-transparent '>
-         <Basket
-           onAdd={onAdd}
-           onRemove={onRemove}
-          cartItems={cartItems}
-          ></Basket>
-      </div>
-    )
-    }
-// -----------------Stylo basket-------------------
-
-const [style, setStyle] = useState("");
-
-  const changeStyle = () => {
-    {(style == "cont3") ? setStyle("cont2") : setStyle("cont3")}
-  };
-
 
 return(
     <div className='bg-[#2e0057]'>
     <PreNavbar/>
+    <Navbar/>
 
-{/* ------------------------------Nabvar----------- */}
-      <nav className="flex items-center bg-[#f6d3ff]">
-        <div className=" flex items-center flex-shrink-0 text-black mr-6">
-          <Link to = {'/Home'}>
-            <img src= {Alogo} className='  w-[120px] p-1'/>
-          </Link>  
-        </div>
-
-          <div className="text-xl pr-2 ">
-
-              <a href="/Guantes" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-                Guantes de portero
-              </a>
-
-              <a href="/Zapatos" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-                Zapatos
-              </a>
-
-              <a href="/Accesorio" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
-                Accesorios
-              </a>
-
-              <a href="#/cart" className='block mt-4 lg:inline-block lg:mt-0 '>
-                  <button  onClick={() =>{showSideMenu();changeStyle(style)}}  className='bg-transparent right-2 z-10'>
-                  {(isSideMenuOpen) ?
-                    <Icon path={mdiClose} size={'50px'} color="red"></Icon> :
-                    <Icon path={mdiCartOutline} size={'50px'} color="black" > </Icon> }
-                  </button>
-
-                {(isSideMenuOpen ) ? SideMenu() : ""}
-              </a>
-          </div>
-        </nav>
 
 {/* ------------------------------------------------------------------------------------ */}
     
@@ -114,14 +90,27 @@ return(
      
         <img className='w-[35%]' src={details.image} alt={details.name}></img>
           <div className=' m-4'>
-          {/*<h3>{categories.name}</h3>*/}
+            <h3>{categories.name}</h3>
             <h1>{details.name}</h1>
-            <h3>${details.price}</h3>
-            {/*<Pruebas pruebas2={details.id}></Pruebas>*/}
+
+            <h4>Talla Disponible</h4>
+            {stock.map(item => (
+              <div key={item.id} >
+                 {item.size.size} | {item.quantity}
+              </div>
+            ))}
               <div className='pt-6'>
                 <button className="Zoom buton"> AGREGAR A CARRO DE COMPRA</button>
               </div>
+
+              {cc.map(item => (
+              <div key={item.id} >
+                <h1>{item.typefeature.name}:</h1> {item.feature.name}
+              </div>
+              ))}
+              
           </div>
+
           
 </main>  
     <Footer/>    
