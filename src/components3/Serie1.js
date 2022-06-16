@@ -4,15 +4,16 @@ import "./styles/Recomendador.css"
 
 export default function Serie1 (props)  {
 
-  const {pagina2} = props;
+  const {pagina2,sumar} = props;
 
 
+  
   return (
     <div className=' flex flex-col  '>
       <div className='m-1 flex flex-row justify-around '>
         <button className='preguntas w-1/2'
          onClick={() => {
-          pagina2()
+          pagina2();sumar(1)
         }}  
         >
           <h1>Soy un clásico</h1>
