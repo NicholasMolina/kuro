@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Serie3 (props){
 
-  const {sumar} = props;
+  const {sumar,suma} = props;
 
   return (
     <div className='flex flex-col '>
