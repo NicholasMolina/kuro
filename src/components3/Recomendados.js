@@ -30,7 +30,7 @@ export default function Recomendados(){
         <Navbar/>
 
         <main className='block2 col-2' >
-        <h1>PRODUCTOS RECOMENDADOS SEGUN TUS RESPUESTAS</h1>
+        <h1>PRODUCTOS RECOMENDADOS SEGUN TUS PREFERENCIAS</h1>
         <div className='row prueba' >
 
         {products.map(item => (
