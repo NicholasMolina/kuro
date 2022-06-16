@@ -13,6 +13,8 @@ import Home from './components/Home';
 import Details from './components2/Details';
 import Recomendador from './components3/Recomendador';
 import Serie3 from './components3/Serie3';
+import Pruebas from './components2/pruebas'
+import Recomendados from './components3/Recomendados';
 
 
 ReactDOM.render(
@@ -29,9 +31,11 @@ ReactDOM.render(
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
-     <Route path="/Product/:id" element={<Details/>}>  </Route>      
+     <Route path="/Product/:id" element={<Details/>}>  </Route>
+     <Route path = "/Recomendados/:rank" element={<Recomendados/>}/>      
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
      <Route path="/Serie3" element={<Serie3/>}/>  
+     <Route path="/pruebas" element={<Pruebas/>}/>  
    </Routes>
  </Router>, 
 
