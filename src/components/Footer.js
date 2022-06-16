@@ -16,7 +16,7 @@ const Footer = () => {
             <div className='container-body'>
                 <div className='colum1'>
 
-                    <h1>Mas informacion de la compañia</h1>
+                    <h1>Mas información de la compañia</h1>
                     <p>Somos una marca nacional dedicada al desarrollo y comercialización de productos deportivos especializados en el futbol
                         . Estamos enfocados en potenciar a nuestros deportistas a alcanzar su mejor versión mediante la innovación.
                         Amazing Goalkeeper nace de la necesidad de una tienda espcializada en el deporte rey, el futbol</p>              
@@ -45,7 +45,7 @@ const Footer = () => {
 
                         <div className='row2'>
                             <img src={casa} className='invert'></img>
-                            <label>Chile, ALgeciras, #444</label>
+                            <label>Chile, Algeciras, #444</label>
                         </div>
 
                         <div className='row2'>
