@@ -4,7 +4,7 @@ import "./styles/Recomendador.css"
 
 export default function Serie1 (props)  {
 
-  const {pagina2,sumar} = props;
+  const {pagina2,sumar,change} = props;
 
 
   
@@ -13,7 +13,7 @@ export default function Serie1 (props)  {
       <div className='m-1 flex flex-row justify-around '>
         <button className='preguntas w-1/2'
          onClick={() => {
-          pagina2();sumar(1)
+          pagina2();sumar(1);change()
         }}  
         >
           <h1>Soy un clásico</h1>
@@ -25,7 +25,7 @@ export default function Serie1 (props)  {
       <div className='m-1 flex flex-row justify-around'>
         <button className='preguntas w-1/2'
           onClick={() => {  
-            pagina2()
+            pagina2();sumar(2);change()
           }}  
         >
           <h1>Voy a la última</h1>
@@ -37,7 +37,7 @@ export default function Serie1 (props)  {
       <div className='m-1 flex flex-row justify-around'>
         <button className='preguntas w-1/2'
           onClick={() => {
-            pagina2()
+            pagina2();sumar(3);change()
           }}  
         >
           <h1>Máxima sensibilidad</h1>
