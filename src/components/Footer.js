@@ -17,9 +17,9 @@ const Footer = () => {
                 <div className='colum1'>
 
                     <h1>Mas informacion de la compañia</h1>
-                    <p>Uno de estos es One Piece, la creación de Eiichirō Oda elegida como el manga más popular por el 
-                        publico japonés, según la encuesta de TV Asahi. En la lista le siguieron Demon Slayer,
-                        Slam Dunk, Detective Conan y, finalmente, y ultimo Dragon Ball.</p>              
+                    <p>Somos una marca nacional dedicada al desarrollo y comercialización de productos deportivos especializados en el futbol
+                        . Estamos enfocados en potenciar a nuestros deportistas a alcanzar su mejor versión mediante la innovación.
+                        Amazing Goalkeeper nace de la necesidad de una tienda espcializada en el deporte rey, el futbol</p>              
                 </div>
 
                 <div className='colum2'>
@@ -30,13 +30,13 @@ const Footer = () => {
                         <img src={facebook}></img>
                         <a href ="https://www.facebook.com/amazing.goalkeeper" > Siguenos en facebook </a> 
                     </div>
-                    <div className='row'> 
+                    {/*<div className='row'> 
                         <img src={Twitter}></img>
                         <a href ="" > Siguenos en twitter </a>
-                    </div>
+  </div>*/}
                     <div className='row'> 
                         <img src={instagram}></img>
-                        <a href ="https://www.instagram.com/amazing_goalkeeper/" > Siguenos en insta</a>    
+                        <a href ="https://www.instagram.com/amazing_goalkeeper/" > Siguenos en instagram</a>    
                     </div>
                 </div>
 
@@ -45,17 +45,17 @@ const Footer = () => {
 
                         <div className='row2'>
                             <img src={casa} className='invert'></img>
-                            <label>direccion</label>
+                            <label>Chile, ALgeciras, #444</label>
                         </div>
 
                         <div className='row2'>
                             <img src={telefono} className='invert'></img>
-                            <label>+56997354468</label>
+                            <label>+569 9735 4468</label>
                         </div>
 
                         <div className='row2'>
                             <img src={email} className='invert'></img>
-                            <label>email</label>
+                            <label>amazing_goalkeeper@gmail.com</label>
                         </div>
                 </div> 
                        
