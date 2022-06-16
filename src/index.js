@@ -13,8 +13,12 @@ import Home from './components/Home';
 import Details from './components2/Details';
 import Recomendador from './components3/Recomendador';
 import Serie3 from './components3/Serie3';
+<<<<<<< HEAD
 import Pruebas from './components2/pruebas'
 import Recomendados from './components3/Recomendados';
+=======
+import Carousel from './components/Carousel';
+>>>>>>> 13235213abc07180e05515e2b44c6764dbfd0b07
 
 
 ReactDOM.render(
@@ -34,8 +38,14 @@ ReactDOM.render(
      <Route path="/Product/:id" element={<Details/>}>  </Route>
      <Route path = "/Recomendados/:rank" element={<Recomendados/>}/>      
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
+<<<<<<< HEAD
      <Route path="/Serie3" element={<Serie3/>}/>  
      <Route path="/pruebas" element={<Pruebas/>}/>  
+=======
+     <Route path="/Serie3" element={<Serie3/>}/>
+     <Route path="/Carousel" element={<Carousel/>}/>
+       
+>>>>>>> 13235213abc07180e05515e2b44c6764dbfd0b07
    </Routes>
  </Router>, 
 

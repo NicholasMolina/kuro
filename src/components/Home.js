@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import PreNavbar from './PreNavbar';
 import ImageSlider from './ImageSlider';
 import { SliderData }  from './SliderData';
-import { Carousel } from 'react-responsive-carousel';
 import Footer from './Footer';
 //import Basket from './components2/Basket';
 //import './components2/styles/carrito.css';
@@ -11,6 +10,7 @@ import { useState } from 'react';
 import data from '../components2/data';
 import Bot from  '../components3/Bot';
 import Recomendador from "../components3/Recomendador";
+import Carousel from "./Carousel";
 
 
 
@@ -50,7 +50,6 @@ function Home() {
       <PreNavbar/>
       <Navbar ></Navbar> 
       <Carousel/>
-      <ImageSlider slides={SliderData}/>
       <Bot></Bot>
 <Footer/>
 

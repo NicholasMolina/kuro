@@ -4,26 +4,27 @@ import "./styles/Recomendador.css"
 
 export default function Serie1 (props)  {
 
-  const {pagina2} = props;
+  const {pagina2,sumar} = props;
 
 
+  
   return (
-    <div className='flex flex-col '>
-      <div className='m-1'>
-        <button className='preguntas'
+    <div className=' flex flex-col  '>
+      <div className='m-1 flex flex-row justify-around '>
+        <button className='preguntas w-1/2'
          onClick={() => {
-          pagina2()
+          pagina2();sumar(1)
         }}  
         >
           <h1>Soy un clásico</h1>
-            <div className='m-2'>
+            <div className='m-2 '>
               <h2 className='preguntas '>Me gustan los guantes con corte flat y armado medio. ¡Los que se han usado toda la vida!</h2>
             </div>
         </button>
       </div>
-      <div className='m-1'>
-        <button className='preguntas'
-          onClick={() => {
+      <div className='m-1 flex flex-row justify-around'>
+        <button className='preguntas w-1/2'
+          onClick={() => {  
             pagina2()
           }}  
         >
@@ -33,8 +34,8 @@ export default function Serie1 (props)  {
             </div>
         </button>
       </div>
-      <div className='m-1 '>
-        <button className='preguntas'
+      <div className='m-1 flex flex-row justify-around'>
+        <button className='preguntas w-1/2'
           onClick={() => {
             pagina2()
           }}  

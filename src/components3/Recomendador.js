@@ -26,6 +26,10 @@ export default function Recomendador (props){
 
   const[page, setPage] = useState(0);
 
+  const[suma,setSuma] = useState(0);
+
+//   const[suma,setSuma] = useState(0)
+
   const pagina3 = () => {
     setPage(2);
   }
@@ -36,13 +40,22 @@ export default function Recomendador (props){
   
   const PageDisplay = () => {
     if(page === 0 ){
-        return <Serie1 page = {page} pagina2 = {pagina2} />;
+        return <Serie1  pagina2 = {pagina2} sumar = {sumar} />;
     } else if (page === 1) {
-        return <Serie2  page = {page} pagina3 = {pagina3} />;     
+        return <Serie2   pagina3 = {pagina3} sumar = {sumar} />;     
     } else {
-        return <Serie3/>;
+        return <Serie3 sumar = {sumar} suma={suma}/>;
     }
   };
+
+
+ console.log(suma)
+
+  const sumar = (y) => {
+    setSuma((x) => x + y)
+  }
+
+  
 
   return (    
   <div className='form'>
@@ -51,10 +64,12 @@ export default function Recomendador (props){
     <div className='progressbar'></div>
     
         <div className='form-container flex justify-between'>
-        <img src={jugador1} className='recomendador'></img>
-            <div className='grid justify-center pt-4 preguntasConteiner'>
+        <img src={jugador1} className='recomendador hidden lg:flex'></img>
+            <div className='flex flex-col justify-center pt-4 preguntasConteiner'>
                 <div className='header'></div>
-                    <h1 className='preguntas'>{Preguntas[page]}</h1>
+                    <div className=' flex-row'>
+                        <h1 className='preguntas'>{Preguntas[page]}</h1>
+                    </div>
                 <div className='body'>
                     {PageDisplay()}
                 </div>
@@ -63,14 +78,14 @@ export default function Recomendador (props){
                     disabled = {page == 0} 
                     onClick={() => {
                         setPage((currPage) => currPage - 1)
-                    }}>Prev</button>
+                    }}>Paso Anterior</button>
                     {/* <button            
                      disabled = {page == Preguntas.length - 1} 
                     onClick={() => {
                         setPage((currPage) => currPage + 1);
                     }}>Next</button> */}
             </div>
-        <img src={jugador2} className='recomendador'></img>    
+        <img src={jugador2} className='recomendador hidden lg:flex'></img>    
         </div>
     <Footer/>
   </div>

@@ -7,7 +7,7 @@ export default function Basket(props){
     const shippingPrice = itemsPrice > 2000 ? 0 :50;
     const totalPrice = itemsPrice + shippingPrice;
     
-    
+
 
 
     return(      

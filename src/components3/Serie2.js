@@ -8,16 +8,16 @@ import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export default function Serie2 (props)  {
   
-  const {pagina3} = props;
+  const {pagina3,sumar} = props;
 
+ 
   return (
       <div className='flex flex-col '>
 
-        <div className='m-1'>
-        {/* <Link to = '/Serie3'> */}
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
-            pagina3()
+            pagina3();sumar(1)
           }}              
           >
             <h1>Juego al máximo nivel</h1>
@@ -26,8 +26,8 @@ export default function Serie2 (props)  {
               </div>
           </button>   
         </div>
-        <div className='m-1'>
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
             pagina3()
           }}
@@ -38,8 +38,8 @@ export default function Serie2 (props)  {
               </div>
           </button>
         </div>
-        <div className='m-1 '>
-          <button className='preguntas'
+        <div className='m-1 flex flex-row justify-around'>
+          <button className='preguntas w-1/2'
           onClick={() => {
             pagina3()
           }}

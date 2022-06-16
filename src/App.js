@@ -20,7 +20,6 @@ const App = () => {
   <div className='bg-[#2e0057]'>
     <PreNavbar/>
     <Navbar ></Navbar> 
-    <Carousel/>
     <ImageSlider slides={SliderData}/>
     <Bot></Bot>
           
