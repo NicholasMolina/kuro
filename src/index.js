@@ -13,6 +13,7 @@ import Home from './components/Home';
 import Details from './components2/Details';
 import Recomendador from './components3/Recomendador';
 import Serie3 from './components3/Serie3';
+import Carousel from './components/Carousel';
 
 
 ReactDOM.render(
@@ -31,7 +32,9 @@ ReactDOM.render(
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
      <Route path="/Product/:id" element={<Details/>}>  </Route>      
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
-     <Route path="/Serie3" element={<Serie3/>}/>  
+     <Route path="/Serie3" element={<Serie3/>}/>
+     <Route path="/Carousel" element={<Carousel/>}/>
+       
    </Routes>
  </Router>, 
 

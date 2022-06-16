@@ -18,9 +18,9 @@ function Bot (){
 
   return (
      <div>
-     <div className='flex justify-between text-white'>   
-             <img src={jugador1} className='smallbot'></img>
-             <div className='w-1/2 flex flex-col'>
+     <div className='lg:flex justify-between text-white'>   
+             <img src={jugador1} className='smallbot hidden lg:flex'></img>
+             <div className='w-1/2  flex-col justify-center'>
                  <div className=' flex flex-row justify-center pt-4'>          
                    <text className=' flex-row ' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
                  </div>
@@ -38,13 +38,13 @@ function Bot (){
                 
                  {(isPreguntasOpen) ? PreguntasOpen() : ""}  */}<div className='flex flex-row justify-center'>
                 <div className='flex flex-row justify-around bg-[#f6d3ff] text-[#2e0057] w-1/2 zoom'>
-                  
-                    <Link to="/Recomendador" className=''>RECOMENDADOR DE GUANTES</Link>       
-                 
+                  <button >
+                    <a href='/Recomendador'>RECOMENDADOR DE GUANTES</a>       
+                  </button>
                </div>
                </div>
              </div>
-            <img src={jugador2} className='smallbot'></img>
+            <img src={jugador2} className='smallbot hidden lg:flex'></img>
        
    
   
@@ -55,7 +55,7 @@ function Bot (){
     </nav>     
   </Router>  */}
      </div>
-     </div>
+     </div> 
   )
 }
 
