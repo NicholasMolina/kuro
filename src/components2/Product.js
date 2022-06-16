@@ -17,7 +17,7 @@ export default function Product(props) {
     
     <div className=''>
         
-        <img className='small zoom' src={product.image} alt={product.name}></img>
+        <img className ='h-[250px] zoom2' src={product.image} alt={product.name}></img>
         <h3>{product.name}</h3>
         <div>${product.price}</div>
         {/* <h3>{product.tipo}</h3>
