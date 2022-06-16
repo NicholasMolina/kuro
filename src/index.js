@@ -33,6 +33,7 @@ ReactDOM.render(
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
      <Route path="/Product/:id" element={<Details/>}>  </Route>
+     <Route path="/Recomendados/Product/:id" element={<Details/>}>  </Route>
      <Route path = "/Recomendados/:rank" element={<Recomendados/>}/>      
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
 

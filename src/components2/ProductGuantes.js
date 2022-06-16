@@ -9,6 +9,7 @@ import {Link} from 'react-router-dom'
 import Alogo from './assets/alogo.png'
 import Icon from '@mdi/react';
 import { mdiCartOutline, mdiClose } from '@mdi/js';
+import Footer from '../components/Footer';
 
 export default function ProductGuantes(props){
   
@@ -129,6 +130,7 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
             <Main onAdd={onAdd} products = {products}   ></Main>
           </div>
         </div>
+        <Footer/>
     </div>
   )
 

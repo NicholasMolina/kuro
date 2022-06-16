@@ -2,7 +2,7 @@ import react,{useEffect,useState} from 'react';
 import {useParams,Link} from 'react-router-dom';
 import PreNavbar from '../components/PreNavbar';
 import Navbar from '../components/Navbar';
-
+import Footer from '../components/Footer';
 
 export default function Recomendados(){
     const {rank} = useParams();
@@ -47,6 +47,7 @@ export default function Recomendados(){
               ))}
         </div>    
         </main>
+        <Footer/>
         </div>
 
     )
