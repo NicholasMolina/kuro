@@ -24,7 +24,7 @@ export default function Recomendador (props){
     //  };  
     // }
 
-  const Preguntas = ["¿QUÉ BUSCAS EN UN GUANTE?","¿PARA QUÉ LO VAS A UTILIZAR?","¿NECESITAS ALGUNA CARACTERÍSTICA ESPECIAL?"];
+  const Preguntas = ["¿QUÉ BUSCAS EN UN GUANTE?","¿PARA QUÉ LO VAS A UTILIZAR?","¿ESTÁS LISTO PARA SABER LO QUE NECESITAS?"];
 
   const[page, setPage] = useState(0);
 

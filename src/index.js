@@ -18,7 +18,6 @@ import Recomendados from './components3/Recomendados';
 import Carousel from './components/Carousel';
 
 
-
 ReactDOM.render(
   // // // <React.StrictMode>
   // // //   <App />
@@ -34,6 +33,7 @@ ReactDOM.render(
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
      <Route path="/Product/:id" element={<Details/>}>  </Route>
+     <Route path="/Recomendados/Product/:id" element={<Details/>}>  </Route>
      <Route path = "/Recomendados/:rank" element={<Recomendados/>}/>      
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
      <Route path="/Serie3" element={<Serie3/>}/>  
@@ -42,7 +42,14 @@ ReactDOM.render(
      <Route path="/Carousel" element={<Carousel/>}/>
        
 
-   </Routes>
+
+     <Route path="/Serie3" element={<Serie3/>}/>  
+     <Route path="/pruebas" element={<Pruebas/>}/>  
+
+     <Route path="/Serie3" element={<Serie3/>}/>
+     <Route path="/Carousel" element={<Carousel/>}/>
+       
+    </Routes>
  </Router>, 
 
 
