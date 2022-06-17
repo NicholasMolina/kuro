@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 export default function Basket(props){
     const{cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0);
-    const shippingPrice = itemsPrice > 2000 ? 0 :50;
+    const shippingPrice = itemsPrice > 50000 ? 0 :6990;
     const totalPrice = itemsPrice + shippingPrice;
     
 
@@ -42,16 +42,16 @@ export default function Basket(props){
                 <>
                     <hr></hr>
                     <div className='row'>
-                        <div className='col-2'>Items Price</div>
+                        <div className='col-2'>Precio Productos</div>
                         <div className='col-1 text-right'>${itemsPrice.toFixed(2)}</div>
                     </div>
                     <div className='row'>
-                        <div className='col-2'>shipping Price</div>
+                        <div className='col-2'>Precio de Envio</div>
                         <div className='col-1 text-right'>${shippingPrice.toFixed(2)}</div>
                     </div>
                     <div className='row'>
                         <div className='col-2'>
-                            <strong>Total Price</strong>
+                            <strong>Precio Total</strong>
                         </div>
                         <div className='col-1 text-right'>
                             <strong>${totalPrice.toFixed(2)}</strong>
@@ -59,8 +59,8 @@ export default function Basket(props){
                     </div>
                     <hr />
                     <div className='row'>
-                        <button onClick={() => alert('Implement Checkout')}>
-                            Checkout
+                        <button onClick={() => alert('Implementar boton pago')} className="buton">
+                            Pagar
                         </button>
                     </div>
                 </>
