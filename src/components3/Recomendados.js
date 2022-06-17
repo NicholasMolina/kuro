@@ -39,8 +39,7 @@ export default function Recomendados(){
                     <div className=' text-[#2e0057] hover:text-[#2e0057]'>
                     <img className='small ' src={item.image} alt={item.name}></img>
                     <h1>{item.name}</h1>
-                    <h3 className=' text-sm'>${item.price}</h3>
-                    
+                    <h3 className=' text-sm'>${item.price}</h3>      
                     </div>
                     </a>
                 </div>
