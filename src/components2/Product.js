@@ -54,6 +54,4 @@ export default function Product(props) {
 
 
 
-
-
 // ()=>onAdd(product)}

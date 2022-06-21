@@ -11,6 +11,7 @@ import Icon from '@mdi/react';
 import { mdiCartOutline, mdiClose } from '@mdi/js';
 import Footer from '../components/Footer';
 
+
 export default function ProductGuantes(props){
   
   const [style, setStyle] = useState("");
@@ -127,6 +128,7 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
 
         <div className=''>
           <div className={style}>
+            
             <Main onAdd={onAdd} products = {products}   ></Main>
           </div>
         </div>
