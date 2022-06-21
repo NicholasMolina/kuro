@@ -6,7 +6,7 @@ export default function Nuevos(props){
 
 const[products, setProducts] = useState([]);
 
-  const urll = "http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/category/2";
+  const urll = "http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/new/1";
   //const urll ="https://rickandmortyapi.com/api/character";
   //const urll ="/C:/Users/gianl/Desktop/response.json";
 

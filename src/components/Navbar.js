@@ -14,7 +14,7 @@ import Alogo from './assets/alogo.png'
       {/* </Link> */}
     </div>
     <div className="text-xl pr-2">
-        <a href="/Home" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+        <a href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                   Inicio
         </a>
         <a href="/Guantes" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
