@@ -6,6 +6,7 @@ import './components2/styles/carrito.css';
 import React from 'react';
 import Bot from './components3/Bot';
 import Carousel from './components/Carousel';
+import Nuevos from './components4/Nuevos';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <Navbar ></Navbar> 
     {/* <ImageSlider slides={SliderData}/> */}
     <Carousel></Carousel>
+    <Nuevos></Nuevos>
     <Bot></Bot>
           
         
