@@ -27,7 +27,7 @@ const[products, setProducts] = useState([]);
     return (
       <div className='bg-[#2e0057]'>         
           <main className='block2 col-2'>
-            <h2>DESCUBRE LAS ÚLTIMAS NOVEDADES EN:</h2>
+            <h2 className='flex justify-center'>DESCUBRE LAS ÚLTIMAS NOVEDADES EN:</h2>
             <div className='row prueba'>
               {products.map(item => (
                 <div key={item.id} product={item} className=" zoom2">  
