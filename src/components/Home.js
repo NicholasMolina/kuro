@@ -46,7 +46,7 @@ function Home() {
 
   return (
 
-    <div className='bg-[#2e0057]'>
+    <div className='bg-[#2e0057]' onClick={() => window.location.reload()}>
       <PreNavbar/>
       <Navbar ></Navbar> 
       <Carousel/>
