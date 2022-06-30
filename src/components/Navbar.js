@@ -6,11 +6,11 @@ import Alogo from './assets/alogo.png'
 
   return (
     
-  <nav className="flex items-center bg-[#f6d3ff]">
+  <nav className="flex items-center bg-[#f6d3ff]" onClick={() => window.location.reload()}>
     <div className=" flex items-center flex-shrink-0 text-black mr-6">
-      {/* <Link to = '/Home'> */}
+       <Link to = '/'> 
         <img   src= {Alogo} className='  w-[120px] p-1'/> 
-      {/* </Link> */}
+      </Link> 
     </div>
     <div className="text-xl pr-2">
         <a href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">

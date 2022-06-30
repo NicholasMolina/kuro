@@ -9,6 +9,7 @@ import Icon from '@mdi/react';
 import { mdiCartOutline, mdiClose } from '@mdi/js';
 import Pruebas from'./pruebas';
 import Navbar from '../components/Navbar';
+import Relacion from '../components4/Relacion';
 
 
 export default function  Details (){
@@ -113,6 +114,7 @@ return(
 
           
 </main>  
+    <Relacion/>
     <Footer/>    
     </div>
 )

@@ -27,8 +27,8 @@ const[products, setProducts] = useState([]);
     return (
       <div className='bg-[#2e0057]' >         
           <main className='block2 col-2'>
-            <h2>DESCUBRE LAS ÚLTIMAS NOVEDADES EN:</h2>
-            <div className='row prueba' onClick={() => window.location.reload()}>
+            <h2>PRODUCTOS RELACIONADOS:</h2>
+            <div className='row prueba'  onClick={() => window.location.reload()}>
               {products.map(item => (
                 <div key={item.id} product={item} className=" zoom2">  
                   <Link to = {`/product/${item.id}`}>
@@ -40,6 +40,7 @@ const[products, setProducts] = useState([]);
                   </Link>
                 </div>
               ))}
+              
             </div>
           </main>
       </div> 
