@@ -99,7 +99,7 @@ const showSideMenu = () => {(isSideMenuOpen) ? setisSideMenuOpen(false) : setisS
               <a href="/Zapatos" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                 Zapatos
               </a>
-              <a href="/Accesorio" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
+              <a href="/Accesorios" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
                 Accesorios
               </a>
 
