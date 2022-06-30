@@ -7,7 +7,7 @@ export default function Serie3 (props){
 
   return (
     <div className='flex flex-col '>
-      <Link to = {`/Recomendados/${suma}`}>    
+      <Link to = {`/Recomendados/guantes/${suma}`}>    
       <div className='m-1 flex flex-row justify-around'>
       
         <button className='preguntas w-1/2'

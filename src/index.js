@@ -12,9 +12,11 @@ import ProductGuantes from './components2/ProductGuantes';
 import Home from './components/Home';
 import Details from './components2/Details';
 import Recomendador from './components3/Recomendador';
+import RecomendadorZapatos from './components3/RecomendadorZapatos';
 import Serie3 from './components3/Serie3';
 import Pruebas from './components2/pruebas'
 import Recomendados from './components3/Recomendados';
+import RecomendadosZapatos from './components3/RecomendadosZapatos';
 import Carousel from './components/Carousel';
 
 
@@ -33,10 +35,13 @@ ReactDOM.render(
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>
      <Route path="/Product/:id" element={<Details/>}>  </Route>
-     <Route path="/Recomendados/Product/:id" element={<Details/>}>  </Route>
-     <Route path = "/Recomendados/:rank" element={<Recomendados/>}/>      
+     <Route path="/Recomendados/zapatos/Product/:id" element={<Details/>}>  </Route>
+     <Route path="/Recomendados/guantes/Product/:id" element={<Details/>}>  </Route>
+     <Route path = "/Recomendados/guantes/:rank" element={<Recomendados/>}/>
+     <Route path = "/Recomendados/zapatos/:rank" element={<RecomendadosZapatos/>}/>    
+         
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
-     <Route path="/RecomendadorZapatos" element={<Recomendador/>}>  </Route>
+     <Route path="/RecomendadorZapatos" element={<RecomendadorZapatos/>}>  </Route>
      <Route path="/Serie3" element={<Serie3/>}/>  
      <Route path="/pruebas" element={<Pruebas/>}/>  
      <Route path="/Serie3" element={<Serie3/>}/>

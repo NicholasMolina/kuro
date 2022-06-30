@@ -9,7 +9,7 @@ export default function Recomendados(){
 
     const[products, setProducts] = useState([]);
 
-    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/ranking/guantes/${rank}`;
+    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/ranking/zapatos/${rank}`;
   
     console.log(urll);
 

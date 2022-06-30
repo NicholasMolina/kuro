@@ -2,6 +2,7 @@ import React from 'react'
 import jugador1 from "./assets/futbol1.png"
 import jugador2 from "./assets/futbol2.png"
 import Recomendador from './Recomendador'
+
 import {BrowserRouter as Router,Route,Link} from "react-router-dom"
 
 function Bot (){
@@ -43,15 +44,15 @@ function Bot (){
                   </button>
                </div>
 
-
-
-               </div>
-
                <div className='flex flex-row justify-around bg-[#f6d3ff] text-[#2e0057] w-1/2 zoom'>
                   <button >
                     <a href='/RecomendadorZapatos'>RECOMENDADOR DE ZAPATOS</a>       
                   </button>
                </div>
+
+               </div>
+
+
 
              </div>
             <img src={jugador2} className='smallbot hidden lg:flex'></img>
