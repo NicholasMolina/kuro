@@ -23,8 +23,8 @@ function Bot (){
         <img src={jugador1} className='smallbot hidden lg:flex'></img>
           
             <div className='  pt-0 lg:pt-16 w-1/2  flex-col justify-center  '>
-              <div className=' flex flex-row justify-center'>          
-                <text className=' flex-row w-full sm:text-center ' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
+              <div className=' flex flex-row justify-center w-full'>          
+                <text className=' flex-row w-full sm:text-center' >¿NO SABES QUÉ ELEGIR?</text> 
               </div>
 
               <div className='m-2 flex flex-row justify-around'>
