@@ -86,12 +86,10 @@ export default function Recomendador (props){
   }
 
   return (    
-  <div className='form'>
-    <PreNavbar/>
-    <Navbar/>
-    <div className='progressbar'></div>
-    
-        <div className='form-container flex justify-between'>
+    <div className='bg-[#2e0057]'>
+      <PreNavbar/>
+      <Navbar/>
+        <div className='form-container flex justify-between bg-[#f6d3ff] m-2'>
         <img src={jugador1} className='recomendador hidden lg:flex'></img>
             <div className='flex flex-col justify-center pt-4 preguntasConteiner'>
                 <div className='header'></div>
@@ -114,7 +112,7 @@ export default function Recomendador (props){
                     }}>Next</button> */}
             </div>
         <img src={jugador2} className='recomendador hidden lg:flex'></img>    
-        </div>
+        </div>         
     <Footer/>
   </div>
   );

@@ -25,7 +25,7 @@ export default function Recomendados(){
       },[])
 
     return(
-        <div >
+        <div className='bg-[#2e0057]' >
         <PreNavbar/>
         <Navbar/>
 
