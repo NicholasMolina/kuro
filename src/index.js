@@ -27,7 +27,7 @@ ReactDOM.render(
 
 <Router>
     <Routes>
-      <Route path='/' element={<App/>}/>
+      <Route path="/" element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
