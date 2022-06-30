@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Buscador from '../components4/Buscador';
 import Alogo from './assets/alogo.png'
+import { Link } from 'react-router-dom';
 
  export default function Navbar(props){
 
