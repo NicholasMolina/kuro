@@ -34,7 +34,7 @@ const Video = () => {
               </div> 
 
               <div className='  m-1 '>
-                <iframe src="https://www.instagram.com/p/Ccy-BHFreDT/embed" 
+                <iframe src="https://www.instagram.com/p/CaYLpx1L6XV/embed" 
                 className='flex'
                 width="full" 
                 height="360" 
@@ -45,7 +45,7 @@ const Video = () => {
               </div> 
 
               <div className='  m-1 '>
-                <iframe src="https://www.instagram.com/p/Ccy-BHFreDT/embed" 
+                <iframe src="https://www.instagram.com/p/CXR0rRmLDgD/embed" 
                 className='flex'
                 width="full" 
                 height="360" 
@@ -56,7 +56,7 @@ const Video = () => {
               </div> 
 
               <div className='  m-1  '>
-                <iframe src="https://www.instagram.com/p/Ccy-BHFreDT/embed" 
+                <iframe src="https://www.instagram.com/p/CTxvviQlLa2/embed" 
                 className='flex'
                 width="full" 
                 height="360" 
@@ -66,7 +66,7 @@ const Video = () => {
                 />
               </div>
               <div className='  m-1  '>
-                <iframe src="https://www.instagram.com/p/Ccy-BHFreDT/embed" 
+                <iframe src="https://www.instagram.com/p/CQPNg_bFLkm/embed" 
                 className='flex'
                 width="full" 
                 height="360" 
