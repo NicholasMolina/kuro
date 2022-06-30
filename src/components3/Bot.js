@@ -42,7 +42,17 @@ function Bot (){
                     <a href='/Recomendador'>RECOMENDADOR DE GUANTES</a>       
                   </button>
                </div>
+
+
+
                </div>
+
+               <div className='flex flex-row justify-around bg-[#f6d3ff] text-[#2e0057] w-1/2 zoom'>
+                  <button >
+                    <a href='/RecomendadorZapatos'>RECOMENDADOR DE ZAPATOS</a>       
+                  </button>
+               </div>
+
              </div>
             <img src={jugador2} className='smallbot hidden lg:flex'></img>
        
