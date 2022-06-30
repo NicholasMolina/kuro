@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar';
 import PreNavbar from '../components/PreNavbar';
-import Serie1 from './Serie1';
-import Serie2 from './Serie2';
-import Serie3 from './Serie3';
+import Serie11 from './Serie11';
+import Serie22 from './Serie22';
+import Serie33 from './Serie33';
 import jugador1 from "./assets/futbol1.png"
 import jugador2 from "./assets/futbol2.png"
 import Footer from '../components/Footer';
@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import "./styles/Recomendador.css"
 
 
-export default function Recomendador (props){
+export default function RecomendadorZapatos (props){
 
       const [style, setStyle] = useState("invisible");
 
@@ -24,9 +24,9 @@ export default function Recomendador (props){
     //  };  
     // }
 
-  const Preguntas = ["¿QUÉ BUSCAS EN UN GUANTE?","¿PARA QUÉ LO VAS A UTILIZAR?","¿ESTÁS LISTO PARA SABER LO QUE NECESITAS?"];
+  const PreguntasZ = ["¿EN QUE TIPO DE CANCHAS JUEGAS?","¿QUE TIPO DE MATERIAL?","¿ESTÁS LISTO PARA SABER LO QUE NECESITAS?"];
 
-  const[page, setPage] = useState(0);
+  const[pagez, setPagez] = useState(0);
 
   const[suma,setSuma] = useState(0);
  
@@ -35,28 +35,28 @@ export default function Recomendador (props){
 //   const[ultimo2,setUltimo2] = useState();  
 
   const change = () => {
-         if( page === 1){
+         if( pagez === 1){
             setStyle("invisible")
          }else{
             setStyle("visible")   
          } 
   }  
 
-  const pagina3 = () => {
-    setPage(2);
+  const pagina33 = () => {
+    setPagez(2);
   }
 
-  const pagina2 = () => {
-    setPage(1);
+  const pagina22 = () => {
+    setPagez(1);
   }
   
   const PageDisplay = () => {
-    if(page === 0 ){
-        return <Serie1  pagina2 = {pagina2} sumar = {sumar}  change={change}/>;
-    } else if (page === 1) {
-        return <Serie2   pagina3 = {pagina3} sumar = {sumar} change={change} />;     
+    if(pagez === 0 ){
+        return <Serie11  pagina22 = {pagina22} sumar = {sumar}  change={change}/>;
+    } else if (pagez === 1) {
+        return <Serie22   pagina33 = {pagina33} sumar = {sumar} change={change} />;     
     } else {
-        return <Serie3 sumar = {sumar} suma={suma}/>;
+        return <Serie33 sumar = {sumar} suma={suma}/>;
     }
   };
 
@@ -65,7 +65,7 @@ export default function Recomendador (props){
 
   const sumar = (y) => {
     setSuma((x) => x + y);
-    if(page === 2){
+    if(pagez === 2){
         setUltimo1(y);
     } 
     // else{
@@ -75,9 +75,9 @@ export default function Recomendador (props){
   }
 
   const sumaAnterior = () =>{
-    if( page === 1){
+    if( pagez === 1){
         setSuma(0)
-    }else if(page === 2){
+    }else if(pagez === 2){
         setSuma((x) => x - ultimo1);
     }
     //  else {
@@ -96,7 +96,7 @@ export default function Recomendador (props){
             <div className='flex flex-col justify-center pt-4 preguntasConteiner'>
                 <div className='header'></div>
                     <div className=' flex-row'>
-                        <h1 className='preguntas'>{Preguntas[page]}</h1>
+                        <h1 className='preguntas'>{PreguntasZ[pagez]}</h1>
                     </div>
                 <div className='body'>
                     {PageDisplay()}
@@ -105,7 +105,7 @@ export default function Recomendador (props){
                     <button className={style}
                     // disabled = {page == 0} 
                     onClick={() => {
-                        setPage((currPage) => currPage - 1);sumaAnterior();change()
+                        setPagez((currPage) => currPage - 1);sumaAnterior();change()
                     }}>Paso Anterior</button>
                     {/* <button            
                      disabled = {page == Preguntas.length - 1} 

@@ -2,6 +2,7 @@ import React from 'react'
 import jugador1 from "./assets/futbol1.png"
 import jugador2 from "./assets/futbol2.png"
 import Recomendador from './Recomendador'
+
 import {BrowserRouter as Router,Route,Link} from "react-router-dom"
 
 function Bot (){
@@ -32,6 +33,7 @@ function Bot (){
               </text>
             </div>
 
+
             <div className='flex flex-row justify-center'>
               <div className='flex flex-row justify-around bg-[#f6d3ff] text-[#2e0057]  zoom border-solid border-2 border-[#2e0057] sm:w-full'>
                 <button className='w-full'>
@@ -49,6 +51,7 @@ function Bot (){
 
           </div>
         <img src={jugador2} className='smallbot hidden lg:flex'></img>
+
        
       </div>
     </div> 
