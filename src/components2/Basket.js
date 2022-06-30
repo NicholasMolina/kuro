@@ -59,7 +59,7 @@ export default function Basket(props){
                     </div>
                     <hr />
                     <div className='row'>
-                        <button onClick={() => alert('Implementar boton pago')} className="buton">
+                        <button onClick={() => alert('Estimado Cliente, para continuar la transacción debes realizar una transferencia a la siguiente cuenta: XXXXXXXXXXXX con el siguiente numero de orden XXXXXXX')} className="buton">
                             Pagar
                         </button>
                     </div>

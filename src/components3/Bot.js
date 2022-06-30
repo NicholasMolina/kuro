@@ -23,11 +23,11 @@ function Bot (){
         <img src={jugador1} className='smallbot hidden lg:flex'></img>
           <div className='w-1/2  flex-col justify-center'>
             <div className=' flex flex-row justify-center'>          
-              <text className=' flex-row w-full sm:text-center ' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
+              <text className=' flex-row w-full sm:text-center ' >¿NO SABES QUÉ GUANTES O ZAPATOS ELEGIR?</text> 
             </div>
 
             <div className='m-2 flex flex-row justify-around'>
-              <text className=' w-full text-center'>Existen miles de guantes de portero en el mercado, pero
+              <text className=' w-full text-center'>Existen miles de productos en el mercado, pero
                       ¿cuál es el más adecuado para tí? 
                       Con este recomendador te ayudaremos a elegir los más acertados para tí.
               </text>
