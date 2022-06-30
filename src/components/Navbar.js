@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import Buscador from '../components4/Buscador';
 import Alogo from './assets/alogo.png'
 
@@ -26,12 +25,12 @@ import Alogo from './assets/alogo.png'
         <a href="/Accesorios" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
           Accesorios
         </a>
-       
+        <div className=' grid justify-end '>
+          <Buscador></Buscador> 
+        </div> 
 
     </div>
-    <div className=' grid justify-end '>
-    <Buscador></Buscador> 
-   </div>  
+     
   </nav>
    
   );

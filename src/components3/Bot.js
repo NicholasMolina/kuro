@@ -17,11 +17,11 @@ function Bot (){
 
 
   return (
-     <div>
-     <div className='lg:flex justify-between text-white'>   
+     <div className=''>
+     <div className='flex justify-between text-white m-5'>   
              <img src={jugador1} className='smallbot hidden lg:flex'></img>
              <div className='w-1/2  flex-col justify-center'>
-                 <div className=' flex flex-row justify-center pt-4'>          
+                 <div className=' flex flex-row justify-center'>          
                    <text className=' flex-row ' >¿NO SABES QUÉ GUANTES ELEGIR?</text> 
                  </div>
                  <div className='m-2 flex flex-row justify-around'>
