@@ -18,8 +18,9 @@ const App = () => {
     <Navbar ></Navbar> 
     {/* <ImageSlider slides={SliderData}/> */}
     <Carousel></Carousel>
-    <Nuevos></Nuevos>
     <Bot></Bot>
+    <Nuevos></Nuevos>
+    
           
         
       
