@@ -29,7 +29,7 @@ export default function Serie2 (props)  {
         <div className='m-1 flex flex-row justify-around'>
           <button className='preguntas w-1/2'
           onClick={() => {
-            pagina3();
+            pagina3();guardar2(4,10)
           }}
           >
             <h1>Entrenamientos</h1>
