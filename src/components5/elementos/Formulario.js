@@ -17,6 +17,16 @@ const Formulario = styled.form`
     }
 `;
 
+const Formulario2 = styled.form`
+    display: grid;
+    grid-template-columns:1fr ;
+    gap:20px;
+
+    @media (max-width:800px){
+        grid-template-columns:1fr;
+    }
+`;
+
 const Label = styled.label`
     display:block;
     font-weight:700;
@@ -148,6 +158,7 @@ const MensajeError = styled.div`
 
 export{
     Formulario,
+    Formulario2,
     Label,
     GrupoInput,
     Input,

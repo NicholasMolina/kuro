@@ -30,7 +30,12 @@ export default function Recomendador (props){
 
   const[suma,setSuma] = useState(0);
  
-  const[ultimo1,setUltimo1] = useState();  
+  const[ultimo1,setUltimo1] = useState();
+  
+  const[q1,setQ1] = useState();
+  const[a1,setA1] = useState();
+  const[q2,setQ2] = useState();
+  const[a2,setA2] = useState();
 
 //   const[ultimo2,setUltimo2] = useState();  
 
@@ -52,27 +57,38 @@ export default function Recomendador (props){
   
   const PageDisplay = () => {
     if(page === 0 ){
-        return <Serie1  pagina2 = {pagina2} sumar = {sumar}  change={change}/>;
+        return <Serie1  pagina2 = {pagina2}  guardar = {guardar}  change={change}/>;
     } else if (page === 1) {
-        return <Serie2   pagina3 = {pagina3} sumar = {sumar} change={change} />;     
+        return <Serie2   pagina3 = {pagina3}  guardar2 = {guardar2} change={change} />;     
     } else {
-        return <Serie3 sumar = {sumar} suma={suma}/>;
+        return <Serie3  suma={suma} q1 = {q1} a1 = {a1} q2 = {q2} a2 ={a2}/>;
     }
   };
 
 
- console.log(suma)
+  // const sumar = (y) => {
+  //   setSuma((x) => x + y);
+  //   if(page === 2){
+  //       setUltimo1(y);
+  //   } 
+  //   // else{
+  //   //     setUltimo2(y);
+  //   // }
 
-  const sumar = (y) => {
-    setSuma((x) => x + y);
-    if(page === 2){
-        setUltimo1(y);
-    } 
-    // else{
-    //     setUltimo2(y);
-    // }
+  // }
 
+  const guardar = (x,y) =>{
+    setQ1(x);
+    setA1(y);
   }
+
+  const guardar2 = (x,y) =>{
+    setQ2(x);
+    setA2(y);
+  }
+
+
+
 
   const sumaAnterior = () =>{
     if( page === 1){

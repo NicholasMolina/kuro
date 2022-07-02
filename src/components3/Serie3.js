@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom';
 
 export default function Serie3 (props){
 
-  const {sumar,suma} = props;
+  const {suma,a1,a2,q1,q2} = props;
+
+ console.log(a1);
+ console.log(a2);
+ console.log(q1);
+ console.log(q2);
 
   return (
     <div className='flex flex-col '>
+      
       <Link to = {`/Recomendados/guantes/${suma}`}>    
       <div className='m-1 flex flex-row justify-around'>
       
         <button className='preguntas w-1/2'
           onClick={() => {
-            sumar(1)
+            
           }}
         >
           <h1>MOSTRAR MIS RESULTADOS</h1>

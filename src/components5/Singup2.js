@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import "./styles/estilos.css"
-import { Formulario, Label ,GrupoInput,MensajeError,MensajeExito,IconoValidacion, LeyendaError, Boton , ContenedorBotonCentrado, ContenedorTerminos } from './elementos/Formulario';
+import { Formulario, Label ,MensajeError,MensajeExito, Boton , ContenedorBotonCentrado, ContenedorTerminos } from './elementos/Formulario';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import Input from './Input';
+import PreNavbar from '../components/PreNavbar';
+import Navbar from '../components/Navbar';
 
 const Singup = () => {
   const [usuario,cambiarUsuario] = useState({campo: '', valido: null});
@@ -65,6 +67,9 @@ const Singup = () => {
   } 
 
   return (
+    <div>
+    <PreNavbar/>
+    <Navbar/> 
     <main className='main2'>
       <Formulario action='' onSubmit={onSubmit}>
         <Input
@@ -148,11 +153,12 @@ const Singup = () => {
           </p>     
         </MensajeError>}  
         <ContenedorBotonCentrado>
-          <Boton type='submit'>Enviar</Boton>
+          <Boton type='submit' className=' hover:bg-[#2e0057]'>Enviar</Boton>
         {formularioValido  && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
         </ContenedorBotonCentrado>
       </Formulario>
     </main>
+    </div>
   )
 }
 
