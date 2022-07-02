@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
 import Singin from './components/Singin';
+import Singin2 from './components5/Singin2';
 import Singup from './components/Singup';
+import Singup2 from './components5/Singup2';
 import ProductZapatos from './components2/ProductZapatos';
 import ProductAccesorio from './components2/ProductAccesorios';
 import ProductGuantes from './components2/ProductGuantes';
-
 import Details from './components2/Details';
 import Recomendador from './components3/Recomendador';
 import RecomendadorZapatos from './components3/RecomendadorZapatos';
@@ -29,7 +30,9 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
+     <Route path="/SingUp2" element={<Singup2/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
+     <Route path="/SingIn2" element={<Singin2/>}/>
      <Route path="/Guantes" element={<ProductGuantes/>}/>
      <Route path="/Zapatos" element={<ProductZapatos/>}/> 
      <Route path="/Accesorios" element={<ProductAccesorio/>}/>

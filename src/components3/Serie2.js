@@ -8,7 +8,7 @@ import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export default function Serie2 (props)  {
   
-  const {pagina3,sumar,change} = props;
+  const {pagina3,guardar2,change} = props;
 
  
   return (
@@ -17,7 +17,7 @@ export default function Serie2 (props)  {
         <div className='m-1 flex flex-row justify-around'>
           <button className='preguntas w-1/2'
           onClick={() => {
-            pagina3();sumar(3)
+            pagina3();guardar2(4,9)
           }}              
           >
             <h1>Partidos</h1>
@@ -29,7 +29,7 @@ export default function Serie2 (props)  {
         <div className='m-1 flex flex-row justify-around'>
           <button className='preguntas w-1/2'
           onClick={() => {
-            pagina3();sumar(1)
+            pagina3();
           }}
           >
             <h1>Entrenamientos</h1>
