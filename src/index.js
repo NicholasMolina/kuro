@@ -19,6 +19,8 @@ import Pruebas from './components2/pruebas'
 import Recomendados from './components3/Recomendados';
 import RecomendadosZapatos from './components3/RecomendadosZapatos';
 import Carousel from './components/Carousel';
+import Registro from './component6/Registro';
+import Login from './component6/Login';
 
 
 ReactDOM.render(
@@ -28,7 +30,12 @@ ReactDOM.render(
 
 <Router>
     <Routes>
-      <Route path="/" element={<App/>}/>
+
+    <Route path="/Registro" element={<Registro/>}/>
+    
+    <Route path="/Login" element={<Login/>}/>
+
+    <Route path="/" element={<App/>}/>
      <Route path="/SingUp" element={<Singup/>}/>
      <Route path="/SingUp2" element={<Singup2/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
@@ -41,7 +48,7 @@ ReactDOM.render(
      <Route path="/Recomendados/guantes/Product/:id" element={<Details/>}>  </Route>
 
      <Route path = "/recomendados/guantes/:q1/:a1/:q2/:a2" element={<Recomendados/>}/>
-     <Route path = "/Recomendados/zapatos/:rank" element={<RecomendadosZapatos/>}/>    
+     <Route path = "/Recomendados/zapatos/::q1/:a1/:q2/:a2" element={<RecomendadosZapatos/>}/>    
          
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
      <Route path="/RecomendadorZapatos" element={<RecomendadorZapatos/>}>  </Route>

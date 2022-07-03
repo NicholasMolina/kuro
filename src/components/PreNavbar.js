@@ -27,10 +27,10 @@ const PreNavbar = () => {
     {/* <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4">
         Seguimiento de pedido
       </a> */}
-      <a href="SingIn2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4 border rounded hover:border-transparent">
+      <a href="/SingIn2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4 border rounded hover:border-transparent">
       Iniciar Sesion
       </a>
-      <a href="SingUp2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff]">
+      <a href="/SingUp2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff]">
         Registrarse
       </a>
       {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}
