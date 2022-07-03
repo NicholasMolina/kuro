@@ -1,10 +1,25 @@
  import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import Alogo2 from "./assets/alogo2.png"
 import insta from "./assets/instagram.png"
+import {NavDropdown,Nav} from 'react-bootstrap'
+
+
 
 
 const PreNavbar = () => {
+
+let user= JSON.parse(localStorage.getItem('user-info'))
+console.warn(user)
+
+const navigate=useNavigate();
+
+function logout(){
+  localStorage.clear();
+  navigate('/')
+
+}
+
   return (
     <nav className="flex items-center justify-between flex-wrap bg-[#2e0057] p-6 py-2">
   <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -34,6 +49,12 @@ const PreNavbar = () => {
         Registrarse
       </a>
       {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}
+      <Nav>
+      <NavDropdown title={user && user.name} className = "text-white">
+        <NavDropdown.Item onClick={logout}>Cerrar Sesión</NavDropdown.Item>
+      
+      </NavDropdown>
+      </Nav>
     </div>
   </div>
 </nav>
