@@ -76,7 +76,28 @@ export default function  Details (){
     },[])
    
 
-// ----------------------------Basket-------------------------------
+// ----------------------------Descontar stock-------------------------------
+
+const[product,setProduct]=useState("");
+const[talla,setTalla]=useState("");
+const[cantidad,setCantidad]=useState("");
+
+async function Stock(){
+  let item={product,talla,cantidad}
+  console.warn(item);
+
+  let result= await fetch("http://localhost/proyectoag/api-rest-laravel-ag/public/api/bystock",{
+      method:'POST',
+      body:JSON.stringify(item),
+      headers:{
+          "Content-Type":'application/json',
+          "Accept":'application/json'  
+      }
+  });
+  result = await result.json();
+  console.warn("result",result);
+
+}
 
 
 return(
