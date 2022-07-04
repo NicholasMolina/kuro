@@ -8,6 +8,7 @@ import Bot from './components3/Bot';
 import Carousel from './components/Carousel';
 import Nuevos from './components4/Nuevos';
 import Video from './components4/Video';
+import SearchProduct from './components7/SearchProduct';
 
 
 const App = () => {
@@ -18,8 +19,10 @@ const App = () => {
     <PreNavbar/>
     <Navbar ></Navbar> 
     {/* <ImageSlider slides={SliderData}/> */}
+
     <Carousel></Carousel>
     <Bot></Bot>
+    <SearchProduct></SearchProduct>
     <Nuevos></Nuevos>
     <Video></Video>
           
