@@ -1,6 +1,6 @@
 import react,{useEffect, useState} from 'react';
 //import {useHistory} from 'react-router-dom';
-import Header from './Header';
+
 import Cookies from 'universal-cookie';
 import App from '../App';
 
@@ -33,6 +33,8 @@ function Login(){
         if(JSON.stringify(result)!=1){
 
         window.location.href="./";    
+        }else{
+            alert("usuario incorrecto")
         }
         
 

@@ -42,8 +42,11 @@ const Singup = () => {
     cambiarTerminos(e.target.checked)
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+  
+
 
     if(
       usuario.valido === 'true'  && 
@@ -54,6 +57,40 @@ const Singup = () => {
       telefono.valido === 'true'  &&
       terminos
       ){
+
+        const item = {
+          name: '',
+          surname: '',
+          email: '',
+          password: ''
+        }
+           
+    //  let item={usuario,nombre,correo,password}
+
+    item.name = usuario.campo
+    item.surname = nombre.campo
+    item.email = correo.campo
+    item.password = password.campo
+
+    console.warn(item);
+
+    let result= await fetch("http://localhost/proyectoag/api-rest-laravel-ag/public/api/register",{
+        method:'POST',
+        body:JSON.stringify(item),
+        headers:{
+            "Content-Type":'application/json',
+            "Accept":'application/json'  
+        }
+    });
+    result = await result.json();
+    console.warn("result",result);  
+
+
+
+
+
+
+
         cambiarFormulario(true);
         cambiarUsuario({campo: '', valido:''});
         cambiarNombre({campo: '', valido:null});
@@ -76,9 +113,9 @@ const Singup = () => {
           estado={usuario}
           cambiarEstado={cambiarUsuario}
           tipo="text"
-          label="Usuario"
-          placeholder="oso"
-          name="usuario"
+          label="Nombre"
+          placeholder="Gianluca"
+          name="nombre"
           leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede  contener numeros, letras y guion bajo."
           expresionRegular={expresiones.usuario}
         />
@@ -86,9 +123,9 @@ const Singup = () => {
           estado={nombre}
           cambiarEstado={cambiarNombre}
           tipo="text"
-          label="Nombre"
-          placeholder="Nicholas"
-          name="usuario"
+          label="Apellido"
+          placeholder="Olivares"
+          name="apellido"
           leyendaError="El nombre solo puede contener letras y espacios."
           expresionRegular={expresiones.nombre}
         />
