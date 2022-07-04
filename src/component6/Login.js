@@ -1,8 +1,7 @@
 import react,{useEffect, useState} from 'react';
 //import {useHistory} from 'react-router-dom';
 
-import Cookies from 'universal-cookie';
-import App from '../App';
+
 import { useNavigate } from 'react-router';
 
 function Login(){

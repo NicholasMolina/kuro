@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import './styles/estilos.css'
 import { Formulario2,MensajeError,MensajeExito, Boton , ContenedorBotonCentrado} from './elementos/Formulario';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,18 +6,27 @@ import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import Input from './Input';
 import PreNavbar from '../components/PreNavbar';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router';
 
 const Singin2 = () => {
     const [correo,cambiarCorreo] = useState({campo: '', valido: null});
     const [password,cambiarPassword] = useState({campo: '', valido: null});
     const [formularioValido,cambiarFormulario] = useState(null);
+    const navigate = useNavigate();
 
 const expresiones = {
 		password: /^.{4,12}$/, // 4 a 12 digitos.
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,		
 	}
+
+  useEffect(()=>{
+    if(localStorage.getItem('user-info')) {
+       //navigate("/add")
+    }
+},[])
+
     
-const onSubmit = (e) => {
+const onSubmit = async (e) => {
     e.preventDefault();
     
     if(
@@ -25,6 +34,45 @@ const onSubmit = (e) => {
         correo.valido === 'true'  
        
         ){
+
+        
+          let ingreso = {
+            email: '',
+            password: ''
+          }
+
+
+          ingreso.email = correo.campo
+          ingreso.password = password.campo
+
+          console.warn(ingreso);
+         
+          let result = await fetch("http://localhost/proyectoag/api-rest-laravel-ag/public/api/login",{
+              method:'POST',
+              headers:{
+                  "Content-Type":"application/json",
+                  "Accept":"application/json"
+              },
+              body:JSON.stringify(ingreso)
+          });
+          result= await result.json();
+          localStorage.setItem("user-info",JSON.stringify(result))
+  
+          if(JSON.stringify(result)!=1){
+              navigate("/")
+  
+  
+          window.location.href="./";    
+          }else{
+              alert("usuario incorrecto")
+  
+  
+          }         
+
+
+
+
+
           cambiarPassword({campo: '', valido:null});       
           cambiarCorreo({campo: '', valido:null});        
         }else{
