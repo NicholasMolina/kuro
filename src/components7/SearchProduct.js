@@ -21,9 +21,8 @@ function SearchProduct(){
     return(
         <div>
             <div className='block2 col-2'>
-                <h1>Search Product</h1>
+                <h1>Busca producto</h1>
                 <input type="text" onChange={(e)=>search(e.target.value)} className="form-control" placeholder="Buscar Producto" />
-                <h1>TODOS LOS PRODUCTOS</h1>
                  <div className='row prueba'>
                  
 
