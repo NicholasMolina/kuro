@@ -26,7 +26,7 @@ export default function Serie1 (props)  {
         <button className='preguntas w-1/2'
           onClick={() => {  
             pagina2();guardar(3,7);change()
-          }}  
+            }}  
         >
           <h1>Me gusta sentir mi mano armada</h1>
             <div className='m-2'>

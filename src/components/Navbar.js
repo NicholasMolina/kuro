@@ -5,12 +5,10 @@ import { Link } from 'react-router-dom';
  export default function Navbar(props){
 
   return (
-    
-  <nav className="flex items-center bg-[#f6d3ff]" onClick={() => window.location.reload()}>
-    <div className=" flex items-center flex-shrink-0 text-black mr-6">
-       <Link to = '/'> 
-        <img   src= {Alogo} className='  w-[120px] p-1'/> 
-      </Link> 
+    // onClick={() => window.location.reload()} 
+  <nav className="flex items-center bg-[#f6d3ff]" >
+    <div className=" flex items-center flex-shrink-0 text-black mr-6">     
+        <img  src= {Alogo} className='  w-[120px] p-1'/> 
     </div>
     <div className="text-xl pr-2">
         <a href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">

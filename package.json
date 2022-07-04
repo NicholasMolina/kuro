@@ -17,7 +17,9 @@
     "framer-motion": "^6.2.9",
     "react": "^18.0.0",
     "react-bootstrap": "^2.4.0",
+
     "react-cookie": "^4.1.1",
+
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
     "react-player": "^2.10.1",

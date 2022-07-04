@@ -1,8 +1,7 @@
 import react,{useEffect, useState} from 'react';
 //import {useHistory} from 'react-router-dom';
 
-import Cookies from 'universal-cookie';
-import App from '../App';
+
 import { useNavigate } from 'react-router';
 
 function Login(){
@@ -32,8 +31,15 @@ function Login(){
         localStorage.setItem("user-info",JSON.stringify(result))
 
         if(JSON.stringify(result)!=1){
+
             navigate("/")     
-        }else{
+
+            alert("usuario ")
+            navigate("/")
+
+
+        window.location.href="./";    
+
             alert("usuario incorrecto")
 
 

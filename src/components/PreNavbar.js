@@ -1,4 +1,4 @@
- import React from 'react'
+ import React ,{useState}from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import Alogo2 from "./assets/alogo2.png"
 import insta from "./assets/instagram.png"
@@ -9,6 +9,9 @@ import {NavDropdown,Nav} from 'react-bootstrap'
 
 const PreNavbar = () => {
 
+const[visible,cambiarVisible] = useState(true);  
+
+
 let user= JSON.parse(localStorage.getItem('user-info'))
 console.warn(user)
 
@@ -18,6 +21,14 @@ function logout(){
   localStorage.clear();
   navigate('/')
 
+}
+
+function cambiazo(){
+    if (visible == true){
+    cambiarVisible(false)
+  }else{
+    cambiarVisible(true)
+  }
 }
 
   return (
@@ -33,26 +44,26 @@ function logout(){
   </div>
   <div id='menu' className="text-center w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div className="text-sm lg:flex-grow">
-      <Link to = '/'>
         <img src = {Alogo2} className=' w-[180px]  mt-4 lg:inline-block lg:mt-0 '/>
-      </Link>
         <a className='text-white text-2xl align-middle '>Ecommerce </a>
     </div>
     <div>
     {/* <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4">
         Seguimiento de pedido
       </a> */}
-      <a href="/SingIn2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4 border rounded hover:border-transparent">
+      {visible === true &&<a href="/SingIn2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff] mr-4 border rounded hover:border-transparent">
       Iniciar Sesion
-      </a>
+      </a>}
       <a href="/SingUp2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff]">
         Registrarse
       </a>
       {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}
-      <Nav>
-      <NavDropdown title={user && user.name} className = "text-white">
-        <NavDropdown.Item onClick={logout}>Cerrar Sesión</NavDropdown.Item>
+      <Nav classname="">
       
+       <NavDropdown title={user && user.name } className = "text-white flex flex-col">
+        
+       <NavDropdown.Item onClick={logout}  href="/"  className=" bg-[#2e0057]">Cerrar Sesión</NavDropdown.Item>
+    
       </NavDropdown>
       </Nav>
     </div>

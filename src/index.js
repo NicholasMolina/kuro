@@ -37,7 +37,7 @@ ReactDOM.render(
     
     <Route path="/Login" element={<Login/>}/>
 
-    <Route path="/" element={<App/>}/>
+    <Route path="/" element={<App/>} />
      <Route path="/SingUp" element={<Singup/>}/>
      <Route path="/SingUp2" element={<Singup2/>}/>
      <Route path="/SingIn" element={<Singin/>}/>
