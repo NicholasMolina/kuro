@@ -10,12 +10,15 @@ function SearchProduct(){
     async function search(key){ 
 
         console.warn(key);
+        if(key == 0){
+            setData([])
+        }else{
 
         let result = await fetch("http://localhost/proyectoag/api-rest-laravel-ag/public/api/search/"+key);
         result=await result.json();
         setData(result)
 
-
+        }
     }
 
     return(
