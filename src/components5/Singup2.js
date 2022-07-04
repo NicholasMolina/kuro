@@ -83,7 +83,18 @@ const Singup = () => {
         }
     });
     result = await result.json();
-    console.warn("result",result);  
+    console.warn("result",result);
+    if(JSON.stringify(result)!=1){
+               
+      alert("Usuario Agregado correctamente")
+
+
+  window.location.href="./"; 
+  }else{
+      alert("Registro Fallido: ya se encuentra registrado")
+
+
+  }  
 
 
 
