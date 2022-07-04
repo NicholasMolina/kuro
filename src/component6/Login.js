@@ -3,16 +3,17 @@ import react,{useEffect, useState} from 'react';
 
 import Cookies from 'universal-cookie';
 import App from '../App';
+import { useNavigate } from 'react-router';
 
 function Login(){
 
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
-   // const history = useHistory("");
+    const navigate = useNavigate();
     
     useEffect(()=>{
         if(localStorage.getItem('user-info')) {
-           // history.push("/")
+           //navigate("/add")
         }
     },[])
 
@@ -31,10 +32,14 @@ function Login(){
         localStorage.setItem("user-info",JSON.stringify(result))
 
         if(JSON.stringify(result)!=1){
+            navigate("/")
+
 
         window.location.href="./";    
         }else{
             alert("usuario incorrecto")
+
+
         }
         
 
