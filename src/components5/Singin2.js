@@ -13,7 +13,7 @@ const Singin2 = () => {
     const [password,cambiarPassword] = useState({campo: '', valido: null});
     const [formularioValido,cambiarFormulario] = useState(null);
     const navigate = useNavigate();
-
+    const valor = 0;
 const expresiones = {
 		password: /^.{4,12}$/, // 4 a 12 digitos.
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,		
@@ -59,10 +59,11 @@ const onSubmit = async (e) => {
           localStorage.setItem("user-info",JSON.stringify(result))
   
           if(JSON.stringify(result)!=1){
+               
               navigate("/")
   
   
-          window.location.href="./";    
+          window.location.href="./"; 
           }else{
               alert("usuario incorrecto")
   
@@ -82,11 +83,10 @@ const onSubmit = async (e) => {
 
   return (
 <div>
-    <PreNavbar/>
+    <PreNavbar valor={valor}/>
     <Navbar/>
     <main className='main3'>
         
-
         <Formulario2 action='' onSubmit={onSubmit}>
             <Input
             estado={correo}

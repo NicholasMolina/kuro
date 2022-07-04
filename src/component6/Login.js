@@ -31,6 +31,7 @@ function Login(){
         localStorage.setItem("user-info",JSON.stringify(result))
 
         if(JSON.stringify(result)!=1){
+            alert("usuario ")
             navigate("/")
 
 
