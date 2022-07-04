@@ -139,7 +139,7 @@ const Boton = styled.button`
 `;
 
 const MensajeExito = styled.p`
-    font-size: 14px;
+    font-size: 20px;
     color: ${colores.exito};
     
 `;
