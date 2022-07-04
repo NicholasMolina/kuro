@@ -114,13 +114,25 @@ return(
           <div className=' m-4'>
             <h3>{categories.name}</h3>
             <h1>{details.name}</h1>
+            <h1>{details.id}</h1>
 
-            <h4>Talla Disponible</h4>
+            <h4>ID  Talla Disponible</h4>
             {stock.map(item => (
               <div key={item.id} >
-                 {item.size.size} | {item.quantity}
+                 {item.size.id}  |  {item.size.size} | {item.quantity}
               </div>
             ))}
+            <div>
+              
+              <input type="text" value={product} onChange={(e)=>setProduct(e.target.value)} className="form-control" placeholder="Id Product" />
+              <br />
+              <input type="text" value={talla} onChange={(e)=>setTalla(e.target.value)} className="form-control" placeholder="Ingrese Talla" />
+              <br />
+              <input type="text" value={cantidad} onChange={(e)=>setCantidad(e.target.value)} className="form-control" placeholder="Ingrese Cantidad" />
+              <br />
+
+              <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-[#f6d3ff]" onClick={add} >COMPRAR</button>
+              </div>
 
               {cc.map(item => (
               <div key={item.id} >
@@ -128,13 +140,8 @@ return(
               </div>
               ))}
 
-            <input type="text" value={talla} onChange={(e)=>setTalla(e.target.value)} className="form-control" placeholder="Ingrese Talla" />
-            <br />
-            <input type="text" value={cantidad} onChange={(e)=>setCantidad(e.target.value)} className="form-control" placeholder="Ingrese Cantidad" />
-            <br />
-            <input type="text" value={product} onChange={(e)=>setProduct(e.target.value)} className="form-control" placeholder="Id Product" />
-            <br />
-            <button onClick={add} className="pt-6">COMPRAR</button>
+            
+              
               
           </div>
 

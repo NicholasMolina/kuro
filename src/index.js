@@ -21,6 +21,7 @@ import RecomendadosZapatos from './components3/RecomendadosZapatos';
 import Carousel from './components/Carousel';
 import Registro from './component6/Registro';
 import Login from './component6/Login';
+import SearchProduct from './components7/SearchProduct';
 
 
 ReactDOM.render(
@@ -32,6 +33,7 @@ ReactDOM.render(
     <Routes>
 
     <Route path="/Registro" element={<Registro/>}/>
+    <Route path="/searchproduct" element={<SearchProduct/>}/>
     
     <Route path="/Login" element={<Login/>}/>
 
