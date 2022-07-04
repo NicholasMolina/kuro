@@ -4,7 +4,7 @@ import "./styles/Recomendador.css"
 
 export default function Serie11 (props)  {
 
-  const {pagina22,sumar,change} = props;
+  const {pagina22,guardar,change} = props;
 
 
   
@@ -13,7 +13,7 @@ export default function Serie11 (props)  {
       <div className='m-1 flex flex-row justify-around '>
         <button className='preguntas w-1/2'
          onClick={() => {
-          pagina22();sumar(3);change()
+          pagina22();guardar(5,12);change()
         }}  
         >
           <h1>Juego en Natural</h1>
@@ -25,7 +25,7 @@ export default function Serie11 (props)  {
       <div className='m-1 flex flex-row justify-around'>
         <button className='preguntas w-1/2'
           onClick={() => {  
-            pagina22();sumar(1);change()
+            pagina22();guardar(5,11);change()
           }}  
         >
           <h1>Juego en sintetico</h1>

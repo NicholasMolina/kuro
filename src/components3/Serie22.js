@@ -8,7 +8,7 @@ import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export default function Serie22 (props)  {
   
-  const {pagina33,sumar,change} = props;
+  const {pagina33,guardar2,change} = props;
 
  
   return (
@@ -17,7 +17,7 @@ export default function Serie22 (props)  {
         <div className='m-1 flex flex-row justify-around'>
           <button className='preguntas w-1/2'
           onClick={() => {
-            pagina33();sumar(3)
+            pagina33();guardar2(6,13)
           }}              
           >
             <h1>Gama Alta</h1>
@@ -29,7 +29,7 @@ export default function Serie22 (props)  {
         <div className='m-1 flex flex-row justify-around'>
           <button className='preguntas w-1/2'
           onClick={() => {
-            pagina33();sumar(1)
+            pagina33();guardar2(6,14)
           }}
           >
             <h1>Gama Baja</h1>

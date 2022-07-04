@@ -3,27 +3,27 @@ import {useParams,Link} from 'react-router-dom';
 import PreNavbar from '../components/PreNavbar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import DetailsRe from './detailsRecomendados';
 
 export default function Recomendados(){
-    const {rank} = useParams();
+  const {q1,a1,q2,a2} = useParams();
 
     const[products, setProducts] = useState([]);
 
-    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/product/ranking/zapatos/${rank}`;
+    const urll = `http://localhost/proyectoag/api-rest-laravel-ag/public/api/cc/productqa2/${q1}/${a1}/${q2}/${a2}`;
   
     console.log(urll);
 
     useEffect(() => {
-        const fetchApi = async () => {
-          const data = await fetch(urll);
-          const ss = await data.json();
-          setProducts(ss.product);
-          console.log(ss.product)
-        }
-        fetchApi(urll)
-        
-      },[])
-
+      const fetchApi = async () => {
+        const data = await fetch(urll);
+        const ss = await data.json();
+        setProducts(ss.cc);
+        console.log(ss.cc)
+      }
+      fetchApi(urll)
+      
+    },[])
     return(
         <div className='bg-[#2e0057]'>
         <PreNavbar/>
@@ -35,11 +35,13 @@ export default function Recomendados(){
 
         {products.map(item => (
                 <div key={item.id} product={item} className=" zoom2">
-                    <a href={`product/${item.id}`}> 
+                    <a href={`/product/${item.product_id}`}> 
                     <div className=' text-[#2e0057] hover:text-[#2e0057]'>
-                    <img className='small ' src={item.image} alt={item.name}></img>
-                    <h1>{item.name}</h1>
-                    <h3 className=' text-sm'>${item.price}</h3>      
+                    <img className='small ' src={item.product.image} alt={item.product.name}></img>
+                    <h1>{item.product.name}</h1>
+                    <h3 className=' text-sm'>${item.product.price}</h3>
+                    <DetailsRe id = {item.product_id}></DetailsRe>
+
                     </div>
                     </a>
                 </div>

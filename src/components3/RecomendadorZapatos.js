@@ -30,7 +30,12 @@ export default function RecomendadorZapatos (props){
 
   const[suma,setSuma] = useState(0);
  
-  const[ultimo1,setUltimo1] = useState();  
+  const[ultimo1,setUltimo1] = useState(); 
+  
+  const[q1,setQ1] = useState();
+  const[a1,setA1] = useState();
+  const[q2,setQ2] = useState();
+  const[a2,setA2] = useState();
 
 //   const[ultimo2,setUltimo2] = useState();  
 
@@ -52,27 +57,37 @@ export default function RecomendadorZapatos (props){
   
   const PageDisplay = () => {
     if(pagez === 0 ){
-        return <Serie11  pagina22 = {pagina22} sumar = {sumar}  change={change}/>;
+        return <Serie11  pagina22 = {pagina22} guardar = {guardar}  change={change}/>;
     } else if (pagez === 1) {
-        return <Serie22   pagina33 = {pagina33} sumar = {sumar} change={change} />;     
+        return <Serie22   pagina33 = {pagina33} guardar2 = {guardar2} change={change} />;     
     } else {
-        return <Serie33 sumar = {sumar} suma={suma}/>;
+        return <Serie33 suma={suma} q1 = {q1} a1 = {a1} q2 = {q2} a2 ={a2}/>;
     }
   };
 
 
- console.log(suma)
+// //  console.log(suma)
 
-  const sumar = (y) => {
-    setSuma((x) => x + y);
-    if(pagez === 2){
-        setUltimo1(y);
-    } 
-    // else{
-    //     setUltimo2(y);
-    // }
+// //   const sumar = (y) => {
+// //     setSuma((x) => x + y);
+// //     if(pagez === 2){
+// //         setUltimo1(y);
+//     } 
+//     // else{
+//     //     setUltimo2(y);
+//     // }
 
-  }
+//   }
+
+const guardar = (x,y) =>{
+  setQ1(x);
+  setA1(y);
+}
+
+const guardar2 = (x,y) =>{
+  setQ2(x);
+  setA2(y);
+}
 
   const sumaAnterior = () =>{
     if( pagez === 1){

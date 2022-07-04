@@ -50,7 +50,7 @@ ReactDOM.render(
      <Route path="/Recomendados/guantes/Product/:id" element={<Details/>}>  </Route>
 
      <Route path = "/recomendados/guantes/:q1/:a1/:q2/:a2" element={<Recomendados/>}/>
-     <Route path = "/Recomendados/zapatos/::q1/:a1/:q2/:a2" element={<RecomendadosZapatos/>}/>    
+     <Route path = "/recomendados/zapatos/:q1/:a1/:q2/:a2" element={<RecomendadosZapatos/>}/>    
          
      <Route path="/Recomendador" element={<Recomendador/>}>  </Route>
      <Route path="/RecomendadorZapatos" element={<RecomendadorZapatos/>}>  </Route>
