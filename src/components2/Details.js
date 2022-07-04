@@ -82,7 +82,7 @@ const[product,setProduct]=useState("");
 const[talla,setTalla]=useState("");
 const[cantidad,setCantidad]=useState("");
 
-async function Stock(){
+async function add(){
   let item={product,talla,cantidad}
   console.warn(item);
 
@@ -121,15 +121,20 @@ return(
                  {item.size.size} | {item.quantity}
               </div>
             ))}
-              <div className='pt-6'>
-                <button className="Zoom buton"> AGREGAR A CARRO DE COMPRA</button>
-              </div>
 
               {cc.map(item => (
               <div key={item.id} >
                 <h1>{item.typefeature.name}:</h1> {item.feature.name}
               </div>
               ))}
+
+            <input type="text" value={talla} onChange={(e)=>setTalla(e.target.value)} className="form-control" placeholder="Ingrese Talla" />
+            <br />
+            <input type="text" value={cantidad} onChange={(e)=>setCantidad(e.target.value)} className="form-control" placeholder="Ingrese Cantidad" />
+            <br />
+            <input type="text" value={product} onChange={(e)=>setProduct(e.target.value)} className="form-control" placeholder="Id Product" />
+            <br />
+            <button onClick={add} className="pt-6">COMPRAR</button>
               
           </div>
 
