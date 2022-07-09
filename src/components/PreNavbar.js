@@ -23,6 +23,12 @@ function logout(){
 
 }
 
+function miperfil(){
+  localStorage.clear();
+  navigate('/')
+
+}
+
 function cambiazo(){
     if (visible == true){
     cambiarVisible(false)
@@ -63,6 +69,8 @@ function cambiazo(){
        <NavDropdown title={user && user.name } className = "text-white flex flex-col">
         
        <NavDropdown.Item onClick={logout}  href="/"  className=" bg-[#2e0057]">Cerrar Sesión</NavDropdown.Item>
+       <hr></hr>
+       <NavDropdown.Item onClick={miperfil}  href="/"  className=" bg-[#2e0057]"> Mi Perfil</NavDropdown.Item>
     
       </NavDropdown>
       </Nav>

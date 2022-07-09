@@ -114,7 +114,7 @@ return(
           <div className=' m-4'>
             <h3>{categories.name}</h3>
             <h1>{details.name}</h1>
-            <h1>{details.id}</h1>
+            <h1>ID {details.id}</h1>
 
             <h4>ID  Talla Disponible</h4>
             {stock.map(item => (
