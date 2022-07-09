@@ -91,7 +91,7 @@ const Singup = () => {
 
   window.location.href="./"; 
   }else{
-      alert("Registro Fallido: ya se encuentra registrado")
+      alert("Registro Fallido: el correo ya se encuentra registrado")
 
 
   }  
@@ -125,7 +125,7 @@ const Singup = () => {
           cambiarEstado={cambiarUsuario}
           tipo="text"
           label="Nombre"
-          placeholder="Gianluca"
+          placeholder="Nombre"
           name="nombre"
           leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede  contener numeros, letras y guion bajo."
           expresionRegular={expresiones.usuario}
@@ -135,7 +135,7 @@ const Singup = () => {
           cambiarEstado={cambiarNombre}
           tipo="text"
           label="Apellido"
-          placeholder="Olivares"
+          placeholder="Apellido"
           name="apellido"
           leyendaError="El nombre solo puede contener letras y espacios."
           expresionRegular={expresiones.nombre}
@@ -202,7 +202,7 @@ const Singup = () => {
         </MensajeError>}  
         <ContenedorBotonCentrado>
           <Boton type='submit' className=' hover:bg-[#2e0057]'>Enviar</Boton>
-        {formularioValido  && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+        {/*formularioValido  && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>*/}
         </ContenedorBotonCentrado>
       </Formulario>
     </main>

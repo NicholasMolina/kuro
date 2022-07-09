@@ -19,11 +19,16 @@ export default function Recomendados(){
         const data = await fetch(urll);
         const ss = await data.json();
         setProducts(ss.cc);
-        console.log(ss.cc)
+        
+        if(setProducts(ss.cc) == null){
+          alert("No se han encontrado productos en base a tus respuestas")
+        }
+        console.log(ss.cc);
       }
       fetchApi(urll)
       
     },[])
+
 
     return(
         <div className='bg-[#2e0057]' >
