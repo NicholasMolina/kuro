@@ -7,15 +7,24 @@ import {NavDropdown,Nav} from 'react-bootstrap'
 
 
 
-const PreNavbar = () => {
+export default function PreNavbar (props)  {
 
+  const {valor} = props;
 const[visible,cambiarVisible] = useState(true);  
 
 
-let user= JSON.parse(localStorage.getItem('user-info'))
+let user= JSON.parse(localStorage.getItem('user-info')) 
+
+if(valor == 1){
+  cambiarVisible(false);
+}
+ 
+
+
 console.warn(user)
 
 const navigate=useNavigate();
+
 
 function logout(){
   localStorage.clear();
@@ -23,13 +32,6 @@ function logout(){
 
 }
 
-function cambiazo(){
-    if (visible == true){
-    cambiarVisible(false)
-  }else{
-    cambiarVisible(true)
-  }
-}
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-[#2e0057] p-6 py-2">
@@ -72,7 +74,7 @@ function cambiazo(){
   )
 }
 
-export default PreNavbar
+
 
 
 

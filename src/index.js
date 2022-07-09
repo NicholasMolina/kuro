@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router,Routes,Route, useHref} from 'react-router-dom'
+import {BrowserRouter as Router,Routes,Route, useHref} from ' '
 import Singin from './components/Singin';
 import Singin2 from './components5/Singin2';
 import Singup from './components/Singup';

@@ -22,11 +22,11 @@ function SearchProduct(){
     }
 
     return(
-        <div>
-            <div className='block2 col-2'>
+        <div className=''>
+            <div className='block2 col-2 '>
                 <h1>Busca producto</h1>
                 <input type="text" onChange={(e)=>search(e.target.value)} className="form-control" placeholder="Buscar Producto" />
-                 <div className='row prueba'>
+                 <div className='row prueba '>
                  
 
                 {data.map((item) => 

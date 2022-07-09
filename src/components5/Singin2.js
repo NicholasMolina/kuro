@@ -16,7 +16,7 @@ const Singin2 = () => {
     const valor = 0;
 const expresiones = {
 		password: /^.{4,12}$/, // 4 a 12 digitos.
-		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,		
+		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,		    
 	}
 
   useEffect(()=>{
@@ -27,6 +27,7 @@ const expresiones = {
 
     
 const onSubmit = async (e) => {
+    valor = 1;
     e.preventDefault();
     
     if(
@@ -63,7 +64,7 @@ const onSubmit = async (e) => {
               navigate("/")
   
   
-          window.location.href="./"; 
+          window.location.href="./";    
           }else{
               alert("usuario incorrecto")
   
@@ -87,6 +88,7 @@ const onSubmit = async (e) => {
     <Navbar/>
     <main className='main3'>
         
+
         <Formulario2 action='' onSubmit={onSubmit}>
             <Input
             estado={correo}

@@ -23,7 +23,7 @@ const App = () => {
     <Carousel></Carousel>
     <Bot></Bot>
     <SearchProduct></SearchProduct>
-    <Nuevos></Nuevos>
+    
     <Video></Video>
           
         
